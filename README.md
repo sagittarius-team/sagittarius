@@ -8,10 +8,10 @@ members:
 
 
 wireframe:
-![image1](https://drive.google.com/open?id=1QJTdcB1x3ThTwlEY5hDVD30taGsTfKEz)
-![image2](https://drive.google.com/open?id=1Jfyks4tBlUbZV0SGp9uCU4Gs4VT2Qxfh)
-![image3](https://drive.google.com/open?id=1Urx1hIobd2ekTqDQy_OZgXd9fSry4oXW)
-![image4](https://drive.google.com/open?id=14n2ZX-O20YyB-hDjFfZTLOEQFYKy37un)
+![image1](./images/img1.jpg)
+![image2](./images/img2.jpg)
+![image3](./images/img3.jpg)
+![image4](./images/img4.jpg)
 
 
 ## User Story
@@ -22,7 +22,7 @@ wireframe:
 5. the user enter before the web and he want to check the trip which is booked before.
 
 ## Domain Modeling
-![image](https://drive.google.com/open?id=1vz2f5ZdBvib8vbM2C8kDTxxuK-U6Vpj8)
+![image](./images/domain.JPG)
 
 
 
