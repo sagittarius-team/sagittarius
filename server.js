@@ -37,6 +37,17 @@ app.get('/' , (req,res) =>{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////////errors and listen\\\\\\\\\\\\\\\\\\\\\\\
 app.get('*', (request, response) => {
     response.status(404).send('NOT FOUND');
