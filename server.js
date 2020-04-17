@@ -1,34 +1,36 @@
-'use strict';
+`use strict`;
 
 require('dotenv').config();
-
-//dependencies
 const express = require('express');
 const superagent = require('superagent');
+const PORT = process.env.PORT || 3030;
+const app = express();
+// const methodOverride = require('method-override');
+
+const bodyParser = require('body-parser');
+var path = require('path');
 const pg = require('pg');
-const methodOverride = require('method-override');
 
-//PORT
-const PORT = process.env.PORT || 3000;
-
-//the App
-const app =  express();
-
-//app using
-app.use(express.static('./public'));
-app.use(express.join());
-app.use(express.urlencoded({extended:true}));
-app.use(methodOverride('_method'));
-
-//app sets
-app.set('view engine','ejs');
-
-//client
 const client = new pg.Client(process.env.DATABASE_URL);
 
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+// app.use(methodOverride('_method'));
+
+app.use(bodyParser());
+app.set('view engine', 'ejs');
+
+app.use(express.static('./public'));
+app.set('views', [path.join(__dirname, 'views'),
+path.join(__dirname, 'views/pages/'),
+path.join(__dirname, 'views/pages/searches/'),
+path.join(__dirname, 'views/pages/books/')]);
 /////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-
+app.get('/' , (req,res) =>{
+    res.render('index');
+})
 
 
 
