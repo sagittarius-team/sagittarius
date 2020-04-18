@@ -30,7 +30,7 @@ const client = new pg.Client(process.env.DATABASE_URL);
 /////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 app.get('/about',aboutUsPage);
-app.get('/mission', desideDate)
+app.get('/mission', desideDate);
 app.get('/show', pastMission);
 
 function aboutUsPage(req,res){
@@ -74,13 +74,12 @@ function pastMission(request, response) {
                             let journy = new PastJourny(val);
                             let safeValues = [year,journy.date,journy.description,journy.name,journy.vidURL,journy.img];
                             let SQL2 = 'INSERT INTO mission (year,date,description,name,vidURL,img) VALUES ($1,$2,$3,$4,$5,$6);';
-                            client.query(SQL2,safeValues)
+                            client.query(SQL2,safeValues);
                             return journy
                         })
                         response.render('./mission/show', { theJournies: pastData });
                         
                     })
-
             }
         })
 
@@ -105,9 +104,9 @@ app.get('*', (request, response) => {
     response.status(404).send('NOT FOUND');
 })
 
-// client.connect()
-//     .then(() => {
+client.connect()
+    .then(() => {
         app.listen(PORT, () => {
             console.log(`listening on PORT ${PORT}`);
         });
-    // })
+    })
