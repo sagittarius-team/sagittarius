@@ -16,7 +16,7 @@ const app =  express();
 
 //app using
 app.use(express.static('./public'));
-app.use(express.join());
+app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 
@@ -27,7 +27,12 @@ app.set('view engine','ejs');
 const client = new pg.Client(process.env.DATABASE_URL);
 
 /////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+app.get('/about',aboutUsPage);
 
+
+function aboutUsPage(req,res){
+    res.render('aboutus');
+}
 
 
 
@@ -40,9 +45,9 @@ app.get('*', (request, response) => {
     response.status(404).send('NOT FOUND');
 })
 
-client.connect()
-    .then(() => {
+// client.connect()
+//     .then(() => {
         app.listen(PORT, () => {
             console.log(`listening on PORT ${PORT}`);
-        })
-    })
+        });
+    // })
