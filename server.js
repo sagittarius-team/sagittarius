@@ -17,7 +17,8 @@ const app = express();
 //app using
 app.use(express.static('./public'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended:true}));
+
 app.use(methodOverride('_method'));
 
 //app sets
@@ -27,8 +28,16 @@ app.set('view engine', 'ejs');
 const client = new pg.Client(process.env.DATABASE_URL);
 
 /////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+app.get('/about',aboutUsPage);
 app.get('/mission', desideDate)
 app.get('/show', pastMission);
+
+function aboutUsPage(req,res){
+    res.render('aboutus');
+}
+
+
 
 
 
@@ -90,14 +99,15 @@ function PastJourny(dataForOneJourny) {
 
 
 
+
 ////////////////////////errors and listen\\\\\\\\\\\\\\\\\\\\\\\
 app.get('*', (request, response) => {
     response.status(404).send('NOT FOUND');
 })
 
-client.connect()
-    .then(() => {
+// client.connect()
+//     .then(() => {
         app.listen(PORT, () => {
             console.log(`listening on PORT ${PORT}`);
-        })
-    })
+        });
+    // })
