@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%console.log(taskResult)%>
+
+<% taskResult.forEach(val=> { %>
+<h2><%= val.email %></h2>
+<h2><%= val.username %></h2>
+<h2><%= val.password %></h2>
+<!-- <a href="/myProfile/<%= val.id%>">your profile</a> -->
+<%})%>
+</body>
+</html>
