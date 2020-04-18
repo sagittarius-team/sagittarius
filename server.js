@@ -32,6 +32,7 @@ const client = new pg.Client(process.env.DATABASE_URL);
 app.get('/about',aboutUsPage);
 app.get('/mission', desideDate);
 app.get('/show', pastMission);
+app.get('/f_mission', fulureMission)
 
 function aboutUsPage(req,res){
     res.render('aboutus');
@@ -61,7 +62,7 @@ function pastMission(request, response) {
                 console.log('in data base');
                 // console.log(results)
                 // console.log(results.rows)
-                response.render('./mission/show', { theJournies: results.rows})
+                response.render('./mission/show', { theJournies: results.rows })
             }
             else {
                 // if the date not in data base render it from API
@@ -72,18 +73,52 @@ function pastMission(request, response) {
                     .then(data => {
                         let pastData = data.body.launches.map(val => {
                             let journy = new PastJourny(val);
-                            let safeValues = [year,journy.date,journy.description,journy.name,journy.vidURL,journy.img];
+                            let safeValues = [year, journy.date, journy.description, journy.name, journy.vidURL, journy.img];
                             let SQL2 = 'INSERT INTO mission (year,date,description,name,vidURL,img) VALUES ($1,$2,$3,$4,$5,$6);';
+
                             client.query(SQL2,safeValues);
+
                             return journy
                         })
                         response.render('./mission/show', { theJournies: pastData });
-                        
+
                     })
             }
         })
+}
+
+// fulure mission function 
+function fulureMission(req, res) {
+    let sql = 'SELECT * FROM outlook';
+client.query(sql)  
+.then(data =>{
+    if(data.rows.length > 0 )
+    {
+        res.render('./fu_mission/f_mission',{all_future_moission:data.rows}); 
+    }
+    else 
+    {
+        let url = `https://launchlibrary.net/1.3/launch/next/10`;
+    superagent.get(url)
+        .then(data => {
+
+            let allfultue = data.body.launches.map(val => {
+                let future = new Fulure(val);
+                return future ;
+            });
+            res.render('./fu_mission/f_mission',{all_future_moission:allfultue}); 
+    
+        
+        });
+    }
+
+})
+
 
 }
+
+
+
 //////////////////constructor for past journies
 function PastJourny(dataForOneJourny) {
     this.date = dataForOneJourny.net;
@@ -92,7 +127,15 @@ function PastJourny(dataForOneJourny) {
     this.vidURL = dataForOneJourny.vidURL;
     this.img = dataForOneJourny.rocket.imageURL || 'https://launchlibrary1.nyc3.digitaloceanspaces.com/RocketImages/placeholder_1920.png';
 }
+/////////////// constructor for  Fulure
+function Fulure(val) {
+    this.name = val.name;
+    this.net=val.net;
+    this.image=val.rocket.imageURL;
+    // this.agencies=val.pads[0].agencies[0].name;
+    this.description=(val.missions[0] && val.missions[0].description)||'There is no description';
 
+}
 
 
 
