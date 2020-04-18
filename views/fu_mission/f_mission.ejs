@@ -12,17 +12,18 @@
         <%-  include('../layout/header.ejs')     %>
     </header>
     <main>
-        <% all_future_moission.forEach (val =>{ %>
+        <% all_future_moission.forEach ((val,id)  =>{ %>
         <div>
             <h1> <%= val.name %></h1>
             <img src="<%= val.image %>" alt="">
             <p> <%= val.net  %></p>
             <!-- <p> <%= val.agencies%> </p> -->
             <p> <%=val.description    %> </p>
+            <button><a href="/book/<%= id %>">Book</a></button>
         </div>
 
 
-        <%})%>
+        <%});%>
 
 
 

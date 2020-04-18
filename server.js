@@ -32,7 +32,9 @@ const client = new pg.Client(process.env.DATABASE_URL);
 app.get('/about',aboutUsPage);
 app.get('/mission', desideDate);
 app.get('/show', pastMission);
-app.get('/f_mission', fulureMission)
+app.get('/f_mission', fulureMission);
+app.get('/book/:trip_id',booking);
+app.delete('/delete/:trip_id',deleteTripDataBase);
 
 function aboutUsPage(req,res){
     res.render('aboutus');
@@ -88,7 +90,9 @@ function pastMission(request, response) {
 }
 
 // fulure mission function 
+let allfultue;
 function fulureMission(req, res) {
+    allfultue = [];
     let sql = 'SELECT * FROM outlook';
 client.query(sql)  
 .then(data =>{
@@ -102,19 +106,48 @@ client.query(sql)
     superagent.get(url)
         .then(data => {
 
-            let allfultue = data.body.launches.map(val => {
+         allfultue = data.body.launches.map(val => {
                 let future = new Fulure(val);
                 return future ;
             });
             res.render('./fu_mission/f_mission',{all_future_moission:allfultue}); 
-    
-        
         });
     }
+});
+}
 
-})
+/// booking function
+function booking(req,res){
+    let idBook = req.params.trip_id;
+    let name = allfultue[idBook].name;
+    let net = allfultue[idBook].net;
+    let image = allfultue[idBook].image;
+    let description = allfultue[idBook].description;
+    let SQL = 'INSERT INTO booking (name,net,image,description) VALUES ($1,$2,$3,$4);';
+    let safeValues = [name,net,image,description];
+    client.query(SQL,safeValues);
+    renderBookDataBase(res);
+    
+}
+function renderBookDataBase(res) {
+    let SQL2 = 'SELECT * FROM booking;';
+    client.query(SQL2)
+        .then(result => {
+            res.render('./fu_mission/show', { data: result.rows });
+        });
+}
 
-
+// delete from dataBase
+function deleteTripDataBase(req,res){
+    console.log('hhhhhhhh hh ',req.params.trip_id);
+    let idBook = req.params.trip_id;
+    let SQL = 'DELETE FROM booking WHERE id = $1;';
+    let safeValues = [idBook];
+    client.query(SQL,safeValues)
+    .then(() =>{
+       renderBookDataBase(res); 
+    }
+    );
 }
 
 
