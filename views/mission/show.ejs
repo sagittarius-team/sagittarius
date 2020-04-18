@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <%- include('../layout/header.ejs') %> 
+    </header>
+    <main>
+        <section>
+            <% theJournies.forEach(val=>{ %> 
+                <div class="journies">
+                    <h3><%= val.name %> </h3>
+                    <img src="<%= val.img %> " alt="hi">
+                    <p><%= val.date %> </p>
+                    <p><%= val.description %> </p>
+                    <a href="<%= val.vidURL %> ">lunching video</a>   
+                     
+
+                </div>
+
+
+            <% }) %> 
+            
+        </section>
+    </main>
+    
+</body>
+</html>
