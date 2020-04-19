@@ -200,12 +200,12 @@ client.query(sql)
         let url = `https://launchlibrary.net/1.3/launch/next/10`;
     superagent.get(url)
         .then(data => {
-
+            console.log(data);
          allfultue = data.body.launches.map(val => {
                 let future = new Fulure(val);
-                let SQL = 'INSERT INTO outlook (name,net,image,description) VALUES ($1,$2,$3,$4);';
-                let safeValues = [future.name,future.net,future.image,future.description];
-                client.query(SQL,safeValues);
+                // let SQL = 'INSERT INTO outlook (name,net,image,description) VALUES ($1,$2,$3,$4);';
+                // let safeValues = [name,net,image,description];
+                // client.query(SQL,safeValues);
                 return future ;
             });
             res.render('./fu_mission/f_mission',{all_future_moission:allfultue}); 
