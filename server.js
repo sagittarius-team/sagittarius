@@ -108,6 +108,9 @@ client.query(sql)
 
          allfultue = data.body.launches.map(val => {
                 let future = new Fulure(val);
+                let SQL = 'INSERT INTO outlook (name,net,image,description) VALUES ($1,$2,$3,$4);';
+                let safeValues = [name,net,image,description];
+                client.query(SQL,safeValues);
                 return future ;
             });
             res.render('./fu_mission/f_mission',{all_future_moission:allfultue}); 
