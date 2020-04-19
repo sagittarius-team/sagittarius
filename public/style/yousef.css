@@ -1,0 +1,125 @@
+body , html{
+    width: 1080px;
+    background-color: steelblue;
+    box-sizing: border-box;
+    margin: auto;
+
+}
+
+a{
+    text-decoration: none;
+}
+header{
+    vertical-align: middle;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    /* height: 50px; */
+    text-align: center;
+}
+nav{
+    display: flex; 
+    text-align: center;
+    justify-content: space-between;
+    width: 50%;    
+}
+nav ul{
+    display: flex; 
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+nav ul li{
+    padding: 5px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    
+}
+.dateform{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
+.datelabel{
+    margin-top: 50px;
+    font-size: 150%;
+}
+#date{
+    margin: auto;
+    width: 20%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 120%;
+    padding: 1em 0;
+    background-color: blue;
+    color: lightcoral;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+
+}
+.enter{
+    margin: auto;
+    width: 20%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 100%;
+    padding: .7em 0;
+    background-color: red;
+    color: white;
+    font-size: 1.5em;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.journies{
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    text-align: center;
+    margin-top: 50px;
+}
+.h3{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+.img{
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+}
+.description{
+    margin: 20px 0;
+    width: 80%;
+    background-color: orange;
+    padding: 20px;
+    
+}
+.vid{
+    background-color: green;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 20px;
+    margin-bottom: 20px;
+    
+
+}

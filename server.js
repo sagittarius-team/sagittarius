@@ -109,7 +109,7 @@ client.query(sql)
          allfultue = data.body.launches.map(val => {
                 let future = new Fulure(val);
                 let SQL = 'INSERT INTO outlook (name,net,image,description) VALUES ($1,$2,$3,$4);';
-                let safeValues = [name,net,image,description];
+                let safeValues = [future.name,future.net,future.image,future.description];
                 client.query(SQL,safeValues);
                 return future ;
             });
@@ -160,7 +160,7 @@ function PastJourny(dataForOneJourny) {
     this.date = dataForOneJourny.net;
     this.description = (dataForOneJourny.missions[0] && dataForOneJourny.missions[0].description) || 'there is no descriptions ';
     this.name = dataForOneJourny.location.pads[0].name;
-    this.vidURL = dataForOneJourny.vidURL;
+    this.vidURL = dataForOneJourny.vidURLs[0];
     this.img = dataForOneJourny.rocket.imageURL || 'https://launchlibrary1.nyc3.digitaloceanspaces.com/RocketImages/placeholder_1920.png';
 }
 /////////////// constructor for  Fulure
