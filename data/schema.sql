@@ -19,9 +19,10 @@ CREATE TABLE signup(
     day NUMERIC,
     month VARCHAR(255),
     year NUMERIC,
-    gender VARCHAR(255)
+    gender VARCHAR(255),
+    isAgree VARCHAR(255)
    
 );
 
-INSERT INTO signup(username,password,email,day,month,year,gender) VALUES ('esraa',12345678,'ma.esraa@hotmail.com',24,'December',1997,'on');
+INSERT INTO signup(username,password,email,day,month,year,gender,isAgree) VALUES ('esraa',12345678,'ma.esraa@hotmail.com',24,'December',1997,'female','agree');
 

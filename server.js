@@ -23,34 +23,20 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('./public'));
 app.set('views', [path.join(__dirname, 'views'),
-path.join(__dirname, 'views/mission/')
+path.join(__dirname, 'views/layout/')
 ]);
 /////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 app.get('/signup' , (req,res) =>{
-    res.render('signup');
+    res.render('/');
 });
-// app.get('/' ,(req,res)=>{
-//     res.render('index');
-// });
 
-// app.post('/sign',signInfo);
-
-// function signInfo(req ,res){
-// let {username ,password,email,day,month,year,gender}=req.body;
-// let SQL ='INSERT INTO signup (username ,password,email,day,month,year,gender) VALUES ($1,$2,$3,$4,$5,$6,$7);';
-// let safeValues =[username ,password,email,day,month,year,gender];
-// return client.query(SQL ,safeValues)
-// .then(()=>{
-//     res.redirect('/')
-// })
-// }
 app.post('/add',addDataBase);//this route for post my data i hada insert it in sign page into my data pase
 function  addDataBase(req,res){
 console.log(req.body);
-let {username,email,password,day,month,year,gender}=req.body;
-let SQL='INSERT INTO signup (username,password,email,day,month,year,gender) VALUES($1,$2,$3,$4,$5,$6,$7);';
-let safeValues=[username,password,email,day,month,year,gender];
+let {username,email,password,day,month,year,gender,isagree}=req.body;
+let SQL='INSERT INTO signup (username,password,email,day,month,year,gender,isAgree) VALUES($1,$2,$3,$4,$5,$6,$7,$8);';
+let safeValues=[username,password,email,day,month,year,gender,isagree];
 return client.query(SQL ,safeValues)
 .then(()=>{
     res.redirect('/');

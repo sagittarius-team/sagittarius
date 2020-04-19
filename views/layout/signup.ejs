@@ -1,55 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-
-    <div class="div-rock">
-        <img src="/images/img1.jpg"> 
-    </div>
-
-    <div class="box">
-<a class="style-btn" href="#popup1">sign Up</a>
-    </div>
-
-
-
 
     <div id="popup1" class="overlay">
 
         <div class="popup">
-           
-          <a class="close" href="/">&times;</a>
+            <div class="div-rock">
+                <img src="/images/pink-rocket.png">
+            </div>
 
-            <form id="showOrders1">
+            <a class="close" href="#">&times;</a> 
+
+            <div id="showOrders1">
                 <div class="sign-in1">
 
                     <form action="/add" method="post">
                         <h2> Sign Up Now </h2>
-
+                        
                             <input type="text" name="username" class="input-box1" placeholder="Enter your Name">
-                            <p>Username must be  and contain 5 - 12 characters</p><br>
+                            <p>Username must be and contain 5 - 12 characters</p>
 
                             <input type="text" name="email" class="input-box1" placeholder="Enter your Email">
                             <p>Email must be a valid address, e.g. me@mydomain.com</p>
-                            <br>
+                            
 
-                            <input type="password" name="password" id="pass" class="input-box1"
+                           <input type="password" name="password" id="pass" class="input-box1"
                                 placeholder="Enter your Password">
-                                <p>Password must alphanumeric (@, _ and - are also allowed) </p>
-                                <br>
-
-                            <input class="passw1" type="checkbox" onclick="buttonpass()">show Password
+                            <p>Password must alphanumeric (@, _ and - are also allowed) </p>
+                            
+                              <input class="passw1" type="checkbox" onclick="buttonpass()">show Password
                             <div class="gender1"> Gender:
-                                <input class="input11" type="radio" name="gender">Male
-                                <input class="input21" type="radio" name="gender">Female
-                                <input class="input31" type="radio" name="gender">Others </div>
+                                <input class="input1" type="radio" name="gender" value="Male">Male
+                                <input class="input2" type="radio" name="gender" value="Female">Female
+                                <input class="input3" type="radio" name="gender" value="Others">Others </div> 
                             <!--create birth select-->
-                            <label>Birth :
+                             <label>Birth :
                                 <select class="selectdate" name="day">
                                     <option value="">Day</option>
                                     <option value="">---</option>
@@ -218,26 +200,15 @@
                                     <option value="1900">1900</option>
                                 </select>
                             </label>
-                            <div class="check.aa"><span> <input name="isagree" class="mycheck" type="checkbox">
-                               </span> agree to the terms of services</div>
-                                
-                               <button type="submit" class="signUp-btn1">Sign Up </button>
+                            <div class="check.aa"><span> <input name="isagree" type="checkbox" value="agree">
+                                </span> agree to the terms of services</div> 
+
+                            <button type="submit" class="signUp-btn1">Sign Up </button>
                     </form>
 
 
-                   
+
                 </div>
-            </form>
+                </div>
         </div>
     </div>
-    <!-- //////if i click submit sign i want somtthing appear for a while// -->
-    <div class="validation">
-
-        you have sign up ... good
-    </div>
-    
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script src="/ind.js"></script>
-    
-</body>
-</html>

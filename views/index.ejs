@@ -6,39 +6,25 @@
     <title>Document</title>
     <link rel="stylesheet" href="/public/reset.css">
     <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/sign.css">
+   
 </head>
 <body>
     
 <header class="headclass">
-<div id="head-nav">
+<ul id="nav-elemnt">
+<li><a href="/myProfile">your profile</a></li>
 
-</div>
+<li> 
+    <a href="/signup"><a href="#popup1">sign Up</a></a>
+
+    /<a href="/login">Sign In</a> </li>
+</ul>
 
 </header>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%console.log(taskResult)%>
-
-<% taskResult.forEach(val=> { %>
-
-<a href="/myProfile">your profile</a>
-<a href="/signup">Sign up now</a>
-
-<%})%>
+<%- include('./layout/signup.ejs') %>
 
 
 
@@ -54,5 +40,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="/js/ind.js"></script>
 </body>
 </html>

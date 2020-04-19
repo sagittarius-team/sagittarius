@@ -1,4 +1,42 @@
 body{
     position: relative;
     background-color:#6d00a9 ;
+    top: 0%;
+left: 0%;
+right: 0%;
+height: 10000px;
+}
+
+
+
+.headclass{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    height: 56px;
+    background-color: black;
+    opacity: 0.5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+#nav-elemnt{
+    position: absolute;
+    display: flex;
+    width: 629px;
+    top: 0;
+    list-style-type: none;
+    align-items: center;
+    color: white;
+    line-height: 27px;
+    justify-content: space-evenly;
+
+}
+
+#nav-elemnt a {
+    z-index: 99;
+text-decoration: none;
+color: white;
 }
