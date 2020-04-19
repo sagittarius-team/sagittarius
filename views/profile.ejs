@@ -7,12 +7,16 @@
 </head>
 <body>
     <%console.log(taskResult)%>
-
-<% taskResult.forEach(val=> { %>
-<h2><%= val.email %></h2>
-<h2><%= val.username %></h2>
-<h2><%= val.password %></h2>
-<!-- <a href="/myProfile/<%= val.id%>">your profile</a> -->
-<%})%>
+    <!-- <form class="addForm" action="/books" method="post"> -->
+        <label for="" >username</label>
+            <input  type="text" name="username" value="<%= taskResult.username%>">
+            <label for="" >Email</label>
+                <input  type="text" name="email" placeholder="User Email:" value="<%= taskResult.email%>">
+        <label for="" >password</label>
+                <input  type="text" name="password" placeholder="User password:" value=" <%= taskResult.password%>">
+    <label for="" >Geender</label>
+    <input  type="text" name="gender" placeholder="User gender:" value=" <%= taskResult.gender%>">
+            <button> save</button>
+    <!-- </form> -->
 </body>
 </html>

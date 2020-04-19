@@ -219,13 +219,15 @@
 
 input.valid{
     border-color: #36cc36;
-    width: 223px;
+    width: 225px;
+    height: 20px;
     box-shadow: none;
 }
 
 input.invalid{
     border-color: orange;
-    width: 223px;
+    width: 225px;
+    height: 20px;
     box-shadow: none;
 }
 input + p{

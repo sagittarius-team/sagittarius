@@ -12,17 +12,21 @@ CREATE TABLE mission (
 
 
 CREATE TABLE signup(
-    id SERIAL PRIMARY KEY,
+    id SERIAL ,
     username VARCHAR(255),
-    password NUMERIC ,
+    password VARCHAR(255),
     email VARCHAR(255),
     day NUMERIC,
     month VARCHAR(255),
     year NUMERIC,
     gender VARCHAR(255),
-    isAgree VARCHAR(255)
+    isAgree VARCHAR(255),
+    criedt NUMERIC
+
    
 );
 
-INSERT INTO signup(username,password,email,day,month,year,gender,isAgree) VALUES ('esraa',12345678,'ma.esraa@hotmail.com',24,'December',1997,'female','agree');
+INSERT INTO signup(username,password,email,day,month,year,gender,isAgree,criedt) VALUES ('esraa',12345678,'ma.esraa@hotmail.com',24,'December',1997,'female','agree',99999);
 
+ALTER TABLE signup
+ADD CONSTRAINT PK_signup PRIMARY KEY (id,username,email);
