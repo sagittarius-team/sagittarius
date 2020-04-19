@@ -256,8 +256,8 @@ function Fulure(val) {
     this.name = val.name;
     this.net=val.net;
     this.image=val.rocket.imageURL;
-    console.log(val.pads[0].agencies[0].name);
-    this.agencies=val.pads[0].agencies[0].name;
+    // console.log(val.pads[0].agencies[0].name);
+    // this.agencies=val.pads[0].agencies[0].name;
     
 
     this.description=(val.missions[0] && val.missions[0].description)||'There is no description';

@@ -8,7 +8,8 @@ CREATE TABLE mission (
     date VARCHAR(255),
     description TEXT,
     name VARCHAR(255),
-    vidURL VARCHAR(255)
+    vidURL VARCHAR(255),
+    img VARCHAR(255)
 );
 
 
@@ -35,7 +36,7 @@ CREATE TABLE outlook (
     name VARCHAR (255),
     image VARCHAR(255),
     net VARCHAR(255),
-    agencies VARCHAR(255),
+    -- agencies VARCHAR(255),
     description TEXT 
 );
 
@@ -44,6 +45,6 @@ CREATE TABLE booking (
     name VARCHAR (255),
     image VARCHAR(255),
     net VARCHAR(255),
-    agencies VARCHAR(255),
+    -- agencies VARCHAR(255),
     description TEXT 
 );
