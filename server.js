@@ -7,7 +7,6 @@ const PORT = process.env.PORT || 3030;
 const app = express();
 const methodOverride = require('method-override');
 
-const bodyParser = require('body-parser');
 var path = require('path');
 const pg = require('pg');
 
@@ -23,13 +22,6 @@ app.use(methodOverride('_method'));
 //app sets
 app.set('view engine', 'ejs');
 
-app.use(bodyParser());
-app.set('view engine', 'ejs');
-
-app.use(express.static('./public'));
-app.set('views', [path.join(__dirname, 'views'),
-path.join(__dirname, 'views/layout/')
-]);
 /////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 app.get('/signup' , (req,res) =>{
@@ -187,7 +179,6 @@ function pastMission(request, response) {
 // fulure mission function 
 let allfultue;
 function fulureMission(req, res) {
-  
     let sql = 'SELECT * FROM outlook';
 client.query(sql)  
 .then(data =>{
@@ -216,8 +207,10 @@ client.query(sql)
 
 /// booking function
 function booking(req,res){
-    let idBook = req.params.trip_id;
+    let idBook = req.params.trip_id;    
+
     let name = allfultue[idBook].name;
+    
     let net = allfultue[idBook].net;
     let image = allfultue[idBook].image;
     let description = allfultue[idBook].description;
@@ -263,7 +256,10 @@ function Fulure(val) {
     this.name = val.name;
     this.net=val.net;
     this.image=val.rocket.imageURL;
-    // this.agencies=val.pads[0].agencies[0].name;
+    console.log(val.pads[0].agencies[0].name);
+    this.agencies=val.pads[0].agencies[0].name;
+    
+
     this.description=(val.missions[0] && val.missions[0].description)||'There is no description';
 
 }

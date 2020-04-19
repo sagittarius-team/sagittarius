@@ -1,7 +1,5 @@
 DROP TABLE IF EXISTS mission;
 DROP TABLE IF EXISTS signup;
-
-
 DROP TABLE if EXISTS outlook;
 DROP TABLE if EXISTS booking;
 CREATE TABLE mission (
@@ -10,7 +8,7 @@ CREATE TABLE mission (
     date VARCHAR(255),
     description TEXT,
     name VARCHAR(255),
-    vidURLs VARCHAR(255)
+    vidURL VARCHAR(255)
 );
 
 
@@ -37,7 +35,7 @@ CREATE TABLE outlook (
     name VARCHAR (255),
     image VARCHAR(255),
     net VARCHAR(255),
-    -- agencies VARCHAR(255),
+    agencies VARCHAR(255),
     description TEXT 
 );
 
@@ -46,6 +44,6 @@ CREATE TABLE booking (
     name VARCHAR (255),
     image VARCHAR(255),
     net VARCHAR(255),
-    -- agencies VARCHAR(255),
+    agencies VARCHAR(255),
     description TEXT 
 );
