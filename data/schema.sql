@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS mission;
+DROP TABLE IF EXISTS signup;
 DROP TABLE if EXISTS outlook;
 DROP TABLE if EXISTS booking;
 CREATE TABLE mission (
@@ -7,15 +8,34 @@ CREATE TABLE mission (
     date VARCHAR(255),
     description TEXT,
     name VARCHAR(255),
-    vidURL VARCHAR(255),
-    img VARCHAR(255)
+    vidURL VARCHAR(255)
 );
+
+
+CREATE TABLE signup(
+    id SERIAL ,
+    username VARCHAR(255),
+    password VARCHAR(255),
+    email VARCHAR(255),
+    day NUMERIC,
+    month VARCHAR(255),
+    year NUMERIC,
+    gender VARCHAR(255),
+    isAgree VARCHAR(255),
+    criedt NUMERIC
+
+   
+);
+
+INSERT INTO signup(username,password,email,day,month,year,gender,isAgree,criedt) VALUES ('esraa',12345678,'ma.esraa@hotmail.com',24,'December',1997,'female','agree',99999);
+
+
 
 CREATE TABLE outlook (
     name VARCHAR (255),
     image VARCHAR(255),
     net VARCHAR(255),
-    -- agencies VARCHAR(255),
+    agencies VARCHAR(255),
     description TEXT 
 );
 
@@ -24,6 +44,6 @@ CREATE TABLE booking (
     name VARCHAR (255),
     image VARCHAR(255),
     net VARCHAR(255),
-    -- agencies VARCHAR(255),
+    agencies VARCHAR(255),
     description TEXT 
 );
