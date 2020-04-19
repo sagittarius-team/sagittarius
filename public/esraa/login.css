@@ -1,6 +1,4 @@
 
-
-
 .box {
     margin-left: 30%;
     margin-top: 1%;
@@ -50,14 +48,14 @@
     padding: 20px;
     background: linear-gradient(rgb(243, 226, 242),#6d00a9,#190027);
     border-radius: 14px;
-    width: 45%;
+    width: 27%;
     height: 68%;
     position: relative;
     display: flex;
     flex-direction: column;
     /* line-height: 3px; */
     flex-wrap: wrap-reverse;
-    box-shadow: 7px 7px 20px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 27px 7px 20px 0 rgba(0, 0, 0, 0.6);
     transition: all 1s ease-in-out;
     overflow: hidden;
     animation: signUp 0.2s linear 1;
@@ -68,7 +66,7 @@
     top: 7px;
     right: 20px;
     transition: all 200ms;
-    font-size: 25px;
+    font-size: 33px;
     font-weight: bold;
     text-decoration: none;
     color: #333;
@@ -162,30 +160,35 @@
 
 #showOrders1 h2{
     color: #fff;
+    font-size: 31px;
+    margin-left: 82px;
+    margin-bottom: 32px;
 }
 
  
 #showOrders1{
-
     position: absolute;
-    right: 12%;
+    left: 95px;
     display: flex;
-    flex-grow: 1;
-    top: 6%;
+    top: 2%;
     color: white;
-    line-height: 39px;
-    font-style: italic;
+    line-height: 35px;
  }
 
 
 .input-box1{
-    font-size: 12px;
-    width: 225px;
-    height: 20px;
+    font-size: 18px;
+    width: 276px;
+    height: 48px;
+   
+    border: 3px solid gray;
+    opacity: .9;
+    box-sizing: border-box;
     color: black;
-    word-spacing: 2px;
+    padding: 14px;
+    border-radius: 10px;
+    word-spacing: 4px;
     font-family: auto;
-    font-style: oblique;
 }
 
 /* .input-box1:active , .input-box1:focus{
@@ -218,17 +221,21 @@
     /* text-decoration: none; //this for a underline */
 
 input.valid{
-    border-color: #36cc36;
-    width: 225px;
-    height: 20px;
-    box-shadow: none;
+    border: 3px solid #36cc36;
+    width: 276px;
+    height: 48px;
+    padding: 14px;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
 
 input.invalid{
-    border-color: orange;
-    width: 225px;
-    height: 20px;
-    box-shadow: none;
+    border: 3px solid orange;
+    padding: 14px;
+    border-radius: 10px;
+    width: 276px;
+    height: 48px;
+    box-sizing: border-box;
 }
 input + p{
     font-family: arial;
@@ -249,8 +256,9 @@ input + p{
     display: flex;
     justify-content: flex-start;
     /* flex-grow: 1; */
-    margin-bottom: -16px;
-    margin-top: -16px;
+    margin-bottom: -17px;
+    margin-top: -5px;
+    font-size: 12px;
 
     
 }   

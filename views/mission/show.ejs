@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/sign.css">
     <title>Document</title>
 </head>
 <body>
@@ -10,7 +11,7 @@
         <%- include('../layout/header.ejs') %> 
     </header>
     <main>
-        <section>
+        <section >
             <% theJournies.forEach(val=>{ %> 
                 <div class="journies">
                     <h3><%= val.name %> </h3>
