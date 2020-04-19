@@ -92,7 +92,7 @@ function pastMission(request, response) {
 // fulure mission function 
 let allfultue;
 function fulureMission(req, res) {
-    allfultue = [];
+  
     let sql = 'SELECT * FROM outlook';
 client.query(sql)  
 .then(data =>{
@@ -101,7 +101,7 @@ client.query(sql)
         res.render('./fu_mission/f_mission',{all_future_moission:data.rows}); 
     }
     else 
-    {
+    { allfultue = [];
         let url = `https://launchlibrary.net/1.3/launch/next/10`;
     superagent.get(url)
         .then(data => {
@@ -109,7 +109,7 @@ client.query(sql)
          allfultue = data.body.launches.map(val => {
                 let future = new Fulure(val);
                 let SQL = 'INSERT INTO outlook (name,net,image,description) VALUES ($1,$2,$3,$4);';
-                let safeValues = [name,net,image,description];
+                let safeValues = [future.name,future.net,future.image,future.description];
                 client.query(SQL,safeValues);
                 return future ;
             });
