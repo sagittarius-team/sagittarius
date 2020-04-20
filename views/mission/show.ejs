@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> -->
     <%- include('../layout/head.ejs') %> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
 
 </head>
 <body>
@@ -14,13 +16,22 @@
     <main>
         <section>
             <% theJournies.forEach(val=>{ %> 
-                <% console.log(val.vidURL) %> 
+                <% console.log(val.vidurl) %> 
                 <div class="journies">
                     <h3 class="h3"><%= val.name %> </h3>
-                    <img class="img" src="<%= val.img %> " alt="hi">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <img class="img" src="<%= val.img %> " alt="hi">
+                            </div>
+                            <div class="flip-box-back">
+                                <p class="description"><%= val.description %> </p>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <p class="date"><%= val.date %> </p>
-                    <p class="description"><%= val.description %> </p>
-                    <a class="vid" href="<%= val.vidURL %> ">lunching video</a>   
+                    <a class="vid" href="<%= val.vidurl %> " target="_blank">lunching video</a>   
                      
 
                 </div>
@@ -30,6 +41,6 @@
             
         </section>
     </main>
-    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@ CREATE TABLE mission (
     date VARCHAR(255),
     description TEXT,
     name VARCHAR(255),
-    vidURL VARCHAR(255),
+    vidurl VARCHAR(255),
     img VARCHAR(255)
 );
 

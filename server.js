@@ -75,8 +75,8 @@ function pastMission(request, response) {
                     .then(data => {
                         let pastData = data.body.launches.map(val => {
                             let journy = new PastJourny(val);
-                            let safeValues = [year, journy.date, journy.description, journy.name, journy.vidURL, journy.img];
-                            let SQL2 = 'INSERT INTO mission (year,date,description,name,vidURL,img) VALUES ($1,$2,$3,$4,$5,$6);';
+                            let safeValues = [year, journy.date, journy.description, journy.name, journy.vidurl, journy.img];
+                            let SQL2 = 'INSERT INTO mission (year,date,description,name,vidurl,img) VALUES ($1,$2,$3,$4,$5,$6);';
 
                             client.query(SQL2,safeValues);
 
@@ -160,7 +160,7 @@ function PastJourny(dataForOneJourny) {
     this.date = dataForOneJourny.net;
     this.description = (dataForOneJourny.missions[0] && dataForOneJourny.missions[0].description) || 'there is no descriptions ';
     this.name = dataForOneJourny.location.pads[0].name;
-    this.vidURL = dataForOneJourny.vidURLs[0];
+    this.vidurl = dataForOneJourny.vidURLs[0];
     this.img = dataForOneJourny.rocket.imageURL || 'https://launchlibrary1.nyc3.digitaloceanspaces.com/RocketImages/placeholder_1920.png';
 }
 /////////////// constructor for  Fulure
