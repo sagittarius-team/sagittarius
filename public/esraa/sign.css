@@ -137,6 +137,9 @@
 
 #showOrders1 h2{
     color: #fff;
+    margin-left: 33px;
+    font-size: 30px;
+    margin-bottom: 6px;
 }
 
  
@@ -146,7 +149,7 @@
     left: 52%;
     display: flex;
     flex-grow: 1;
-    top: 3%;
+    top: -3%;
     color: white;
     line-height: 39px;
     font-style: auto;

@@ -31,7 +31,9 @@ path.join(__dirname, 'views/mission/'),
 path.join(__dirname, 'views/fu_mission/')
 ]);
 /////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
+app.get('/load' , (req,res) =>{
+    res.render('load');
+});
 app.get('/signup' , (req,res) =>{
     res.render('/');
 });
