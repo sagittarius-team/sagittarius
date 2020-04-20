@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title> -->
+    <%- include('../layout/head.ejs') %> 
+
 </head>
 <body>
     <header>
         <%- include('../layout/header.ejs') %> 
     </header>
     <main>
-        <h1>hi</h1>
-        <form action="/show" method="GET">
-            <label for="date">Enter the Date</label>
+        <form action="/show" method="GET" class="dateform">
+            <label for="date" class="datelabel">Enter the Date</label>
             <input type="date" name="date" id="date" value="">
-            <button>Enter</button>
+            <button class="enter">Enter</button>
         </form>
     </main>
     
