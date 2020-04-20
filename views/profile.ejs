@@ -4,20 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./esraa/profile.css">
+
 </head>
 <body>
-    <%console.log(taskResult)%>
-    <!-- <form class="addForm" action="/books" method="post"> -->
-        <label for="" >username</label>
-            <input  type="text" name="username" value="<%= taskResult.username%>">
-            <label for="" >Email</label>
-                <input  type="text" name="email" placeholder="User Email:" value="<%= taskResult.email%>">
-        <label for="" >password</label>
-                <input  type="text" name="password" placeholder="User password:" value=" <%= taskResult.password%>">
-    <label for="" >Geender</label>
-    <input  type="text" name="gender" placeholder="User gender:" value=" <%= taskResult.gender%>">
-            <button> save</button>
-    <!-- </form> -->
+
+
+    <div class="all-pro">
+        <div class="opcity-pro"> <!--for opectiy-->
+<div class="astronaut">
+    <img src="/images/user-01.png">
+    <div class="btn">
+    <button class="msg1"> Message</button>
+    <button class="msg2"> Folow</button>
+</div>
+<div class="row-hr">
+    <p>profile</p>
+    <hr></div>
+    <!-- ///////////////////// -->
+    <ul class="all-nav">
+<li class="nav-prof"><img src="/images/user3.png"> <p>My Profile</p></li>
+<li class="nav-prof">hi</li>
+<li class="nav-prof">hi</li>
+    </ul>
+    <div class="row-hr">
+        <p>special</p>
+        <hr></div>
+</div>
+</div>
+    <div class="profiles">
+
+<h2>My Profile</h2>
+<p>This information will be displayed publicly on <a href="#">Your profile</a></p>
+
+        <!-- <fieldset class="fieldpro"> -->
+    <label for="" > 
+        Username</label>
+    <input  type="text" class="input-pro"  name="username" placeholder="Username:" value=" <%= taskResult.username%>">
+    <label for="" >Email</label>
+        <input  type="text" class="input-pro" name="email" placeholder="User Email:" value="<%= taskResult.email%>">
+<label for="" >password</label>
+        <input  type="text" class="input-pro" name="password" placeholder="User password:" value=" <%= taskResult.password%>">
+<label for="" >Gender</label>
+<input  type="text" class="input-pro" name="gender" placeholder="User gender:" value=" <%= taskResult.gender%>">
+<label for="" >Birth Day:</label> 
+<div class="my-Birth">
+<input  type="text" class="input-Birth" name="day" placeholder="Day:" value=" <%= taskResult.day%>">/
+<input  type="text" class="input-Birth" name="month" placeholder="Month:" value=" <%= taskResult.month%>">/
+<input  type="text" class="input-Birth" name="year" placeholder="Year:" value=" <%= taskResult.year%>">
+</div>
+
+  <button> save profile Details</button>
+<!-- </fieldset> -->
+</div>
+
+
+</div>
+
 </body>
 </html>
