@@ -1,11 +1,13 @@
 `use strict`;
-const inputs =document.querySelectorAll('.input-box1');
+const inputs =document.querySelectorAll('input');
+
+
 function buttonpass(){
-    var myPassWors =document.getElementById(pass);
-    if (pass.type === "password"){
-        pass.type ="text";
+    var myPassWors =document.getElementById(pass2);
+    if ( pass2.type === "password"){
+        pass2.type ="text";
     }else{
-        pass.type ="password";
+       pass2.type ="password";
         
     }
 }
