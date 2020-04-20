@@ -19,9 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(methodOverride('_method'));
 
-//app sets
-app.set('view engine', 'ejs');
-
+app.set('view engine' ,'ejs')
 /////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 app.get('/about', aboutUsPage);
@@ -38,9 +36,14 @@ app.get('/login', loginpage);
 app.post('/', validLogIn);
 app.get('/signup',signUpPage);
 app.get('/logout',logutPage)
-
+app.get('/load' ,loadFunc);
 
 // Esraa 
+
+function loadFunc(req,res){
+    res.render('./layout/load');
+}
+
 // render profile page
 function myprofile(req, res) {
     let SQL = 'SELECT * FROM signin;';

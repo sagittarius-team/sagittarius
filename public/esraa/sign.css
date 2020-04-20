@@ -1,29 +1,4 @@
 
-
-
-.box {
-    margin-left: 30%;
-    margin-top: 1%;
-    position: absolute;
-    padding: 3px;
-    border: 2px solid #fff;
-    border-radius: 20px/50px;
-    background-clip: padding-box;
-    text-align: center;
-    
-  }
-  
-  .style-btn {
-    font-size: 1em;
-    padding: 1px;
-    color: #fff;
-    border-radius: 20px/50px;
-    text-decoration: none;
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: all 0.3s ease-out;
-  }
- 
   
 
   
@@ -68,7 +43,7 @@
     top: 7px;
     right: 20px;
     transition: all 200ms;
-    font-size: 25px;
+    font-size: 36px;
     font-weight: bold;
     text-decoration: none;
     color: #333;
@@ -162,30 +137,33 @@
 
 #showOrders1 h2{
     color: #fff;
+    margin-left: 33px;
+    font-size: 30px;
+    margin-bottom: 6px;
 }
 
  
 #showOrders1{
 
     position: absolute;
-    right: 12%;
+    left: 52%;
     display: flex;
     flex-grow: 1;
-    top: 6%;
+    top: -3%;
     color: white;
     line-height: 39px;
-    font-style: italic;
+    font-style: auto;
  }
 
 
 .input-box1{
-    font-size: 12px;
-    width: 225px;
-    height: 20px;
+    font-size: 16px;
+    width: 222px;
+    height: 26px;
     color: black;
     word-spacing: 2px;
     font-family: auto;
-    font-style: oblique;
+    
 }
 
 /* .input-box1:active , .input-box1:focus{
@@ -198,12 +176,13 @@
     border-radius: 20px;
     text-align: center;
     padding: 10px;
-    width: 65%;
+    width: 84%;
+    box-sizing: border-box;
     height: 11%;
     border: none;
     font-size: 20px;
     cursor: pointer;
-    margin-left: 36px;
+    margin-left: 10px;
     margin-top: 10px;
     background-color: #6d009a;
 
@@ -219,15 +198,15 @@
 
 input.valid{
     border-color: #36cc36;
-    width: 225px;
-    height: 20px;
+    width: 222px;
+    height: 26px;
     box-shadow: none;
 }
 
 input.invalid{
     border-color: orange;
-    width: 225px;
-    height: 20px;
+    width: 222px;
+    height: 26px;
     box-shadow: none;
 }
 input + p{
@@ -249,13 +228,17 @@ input + p{
     display: flex;
     justify-content: flex-start;
     /* flex-grow: 1; */
-    margin-bottom: -16px;
-    margin-top: -16px;
+    margin-bottom: -9px;
+    margin-top: -6px;
+    font-size: 12px;
 
     
 }   
 
 
-/* #formInput{
-
-} */
+input[type="checkbox" i]{
+    cursor: pointer;
+}
+input[type="radio" i] {
+    cursor: pointer;
+}
