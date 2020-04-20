@@ -8,10 +8,10 @@ members:
 
 
 wireframe:
-![image1](./images/img1.jpg)
-![image2](./images/img2.jpg)
-![image3](./images/img3.jpg)
-![image4](./images/img4.jpg)
+![image1](./public/images/img1.jpg)
+![image2](./public/images/img2.jpg)
+![image3](./public/images/img3.jpg)
+![image4](./public/images/img4.jpg)
 
 
 ## User Story
@@ -22,7 +22,7 @@ wireframe:
 5. the user enter before the web and he want to check the trip which is booked before.
 
 ## Domain Modeling
-![image](./images/domain.JPG)
+![image](./public/images/domain.JPG)
 
 
 

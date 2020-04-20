@@ -42,9 +42,12 @@ img#man {
 
 @keyframes rots { 
     0% { 
-        transform: rotate(-20deg); 
-    } 100% { 
-        transform: rotate(20deg); 
+        transform: translate(-20%,-20%); 
+    } 50% { 
+        transform: translate(-20%,0%); 
+    }
+    100%{
+        transform: translate(20%,0%); 
     }
 }
 
