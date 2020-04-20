@@ -15,7 +15,12 @@
 </head>
 <body>
     
-<header class="headclass">
+    
+<header >
+    <%- include('./layout/header.ejs') %> 
+</header>
+
+<!-- 
 <ul id="nav-elemnt">
     <li><a href="/myProfile">profile</a> </li>
     
@@ -26,10 +31,7 @@
     <a href="/logout">logout</a>
 
     <!-- /<a href="/login">Sign In</a> </li> -->
-</ul>
-
-</header>
-
+</ul> -->
 
 <%- include('./layout/signup.ejs')%>
 <%- include('./layout/login.ejs')%>
