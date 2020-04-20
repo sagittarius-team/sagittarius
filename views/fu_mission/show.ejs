@@ -12,14 +12,14 @@
         <%-  include('../layout/header.ejs')     %>
     </header>
     <main>
-        <% data.forEach ((val,id)  =>{ %>
+        <% data.forEach (val  =>{ %>
         <div>
             <h1> <%= val.name %></h1>
             <img src="<%= val.image %>" alt="">
             <p> <%= val.net  %></p>
-            <!-- <p> <%= val.agencies%> </p> -->
-            <p> <%=val.description    %> </p>
-            <%console.log('llllll ',val.id); %>
+            <p> <%= val.agencies%> </p>
+            <p> <%=val.description%> </p>
+            <p>cost: <%= val.cost%></p>
             <form action="/delete/<%= val.id%>?_method=delete" method="post">
             <button type="submit">delete</button>
             </form>
