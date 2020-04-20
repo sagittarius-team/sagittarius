@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%console.log(taskResult)%>
+    <!-- <form class="addForm" action="/books" method="post"> -->
+        <label for="" >username</label>
+            <input  type="text" name="username" value="<%= taskResult.username%>">
+            <label for="" >Email</label>
+                <input  type="text" name="email" placeholder="User Email:" value="<%= taskResult.email%>">
+        <label for="" >password</label>
+                <input  type="text" name="password" placeholder="User password:" value=" <%= taskResult.password%>">
+    <label for="" >Geender</label>
+    <input  type="text" name="gender" placeholder="User gender:" value=" <%= taskResult.gender%>">
+            <button> save</button>
+    <!-- </form> -->
+</body>
+</html>
