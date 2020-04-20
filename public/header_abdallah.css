@@ -1,0 +1,68 @@
+#header {
+	background: url(../future_img/bg-transparent1.png) repeat;
+}
+
+
+body #page {
+	background: url("./future_img//bg-home.jpg") no-repeat scroll center top #000000;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: auto;
+    z-index: 3;
+    
+}
+#header div {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+
+#header div ul{
+	display: flex;
+    flex-direction: row;
+    padding-right: 4%;
+    align-items: center;
+    justify-content: space-around;
+    width: 43%;
+    }
+.logo img{
+	width: 200px;
+    margin: 4%;
+}
+img{
+    width: 50px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+  
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}

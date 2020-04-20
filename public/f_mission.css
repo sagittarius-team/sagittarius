@@ -1,4 +1,4 @@
-/* Website template by freewebsitetemplates.com */
+
 body {
 	margin: 0;
 	padding: 0;
@@ -6,7 +6,7 @@ body {
 	width: auto;
 }
 body #page {
-	background: url("../images/bg-home.jpg") no-repeat scroll center top #000000;
+	background: url("./future_img//bg-home.jpg") no-repeat scroll center top #000000;
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
@@ -26,19 +26,19 @@ img {
 /*-------------------------------------------FONTS---------------------------------------------*/
 @font-face {
 	font-family: 'audiowide-regular-webfont';
-	src: url('../fonts/audiowide-regular-webfont.eot');
-	src: url('../fonts/audiowide-regular-webfont.woff') format('woff'), url('../fonts/audiowide-regular-webfont.ttf') format('truetype'), url('../fonts/audiowide-regular-webfont.svg') format('svg');
+	src: url('./fonts/audiowide-regular-webfont.eot');
+	src: url('./fonts/audiowide-regular-webfont.woff') format('woff'), url('../fonts/audiowide-regular-webfont.ttf') format('truetype'), url('../fonts/audiowide-regular-webfont.svg') format('svg');
 }
 /*----------------------------------------header-styles---------------------------------------*/
 #header {
-	background: url(../images/bg-transparent1.png) repeat;
+	background: url('./future_img/bg-transparent1.png') repeat;
 	margin: 0;
 	min-height: 60px;
 	padding: 0;
 	width: auto;
 }
 #header div {
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	max-width: 940px;
 	min-height: 60px;
 	padding: 0 10px;
@@ -75,12 +75,12 @@ img {
 	color: #ffffff;
 	display: block;
 	font-family: Arial;
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: normal;
 	line-height: 59px;
 	margin: 0;
 	min-height: 60px;
-	padding: 0 24px;
+	padding: 0 16px;
  *padding: 0 23px; /* Needed for IE8 and old versions */
 	text-align: center;
 	text-transform: uppercase;

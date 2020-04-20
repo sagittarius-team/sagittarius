@@ -4,23 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/public/reset.css">
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="./reset.css">
+    <!-- <link rel="stylesheet" href="./index.css"> -->
     <link rel="stylesheet" href="./esraa/login.css">
     <link rel="stylesheet" href="./esraa/sign.css">
 
- 
-
-   
 </head>
 <body>
-    
-    
-<header >
-    <%- include('./layout/header.ejs') %> 
-</header>
-
-<!-- 
+    <%- include('./layout/header_abdallah.ejs') %> 
+<!-- <header class="headclass">
 <ul id="nav-elemnt">
     <li><a href="/myProfile">profile</a> </li>
     
@@ -28,10 +20,23 @@
     <a href="/login"><a href="#popup2">sign In</a></a>
     |
     |
-    <a href="/logout">logout</a>
+    <a href="/logout">logout</a> -->
+    <div id="body" class="home">
+        <div class="header">
+            <div>
+                <img src="./future_img/satellite.png" alt="" class="satellite">
+                <h1>SAGITTARIUS</h1>
+                <h2>SPACE TRIPS</h2>
+                <a href="/load" class="more">SGIN UP</a>
+            </div>
+        </div>	
+    </div>
 
     <!-- /<a href="/login">Sign In</a> </li> -->
-</ul> -->
+<!-- </ul> -->
+
+<!-- </header> -->
+
 
 <%- include('./layout/signup.ejs')%>
 <%- include('./layout/login.ejs')%>
