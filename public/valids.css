@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+    background-color: rgb(55, 1, 83);
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+#make {
+    background-color: #f4e6fb;
+    color: black;
+    width: 377px;
+    border-radius: 10px;
+    padding: 3%;
+    text-align: center;
+}
+#make button{
+    cursor: pointer;
+    text-align: center;
+    padding: 2%;
+    width: 61px;
+    border-radius: 5px;
+    border: none;
+    background: #bf65f1;
+    color: white;
+    margin-left: 83%;
+    margin-top: 4%;
+}
+#make button:hover{
+    background-color: #6D00A9; 
+}
+#make button a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+
+.fade-in {
+    animation: fadeIn ease 5s;
+    -webkit-animation: fadeIn ease 5s;
+    -moz-animation: fadeIn ease 5s;
+    -o-animation: fadeIn ease 5s;
+    -ms-animation: fadeIn ease 5s;
+    }
+    @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
