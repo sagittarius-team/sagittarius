@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./bookinfos.css">
 </head>
 
 <body>
     <header>
-        <%-  include('../layout/header.ejs')     %>
+        <!-- <%-  include('../layout/header.ejs')     %> -->
     </header>
     <main>
         <% data.forEach (val  =>{ %>
@@ -19,7 +20,7 @@
             <p> <%= val.net  %></p>
             <p> <%= val.agencies%> </p>
             <p> <%=val.description%> </p>
-            <p>cost: <%= val.cost%></p>
+            <p>cost: <%= val.cost%> $</p>
             <form action="/delete/<%= val.id%>?_method=delete" method="post">
             <button type="submit">delete</button>
             </form>
