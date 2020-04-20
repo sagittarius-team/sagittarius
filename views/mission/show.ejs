@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> -->
-    <%- include('../layout/head.ejs') %> 
+    <%- include('../layout/head.ejs') %>
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="./yousef/magnific-popup.css">
+
 
 </head>
+
 <body>
     <header>
-        <%- include('../layout/header.ejs') %> 
+        <%- include('../layout/header.ejs') %>
     </header>
     <main>
-        <section >
-            <% theJournies.forEach(val=>{ %> 
-                <% console.log(val.vidurl) %> 
-                <div class="journies">
-                    <h3 class="h3"><%= val.name %> </h3>
-                    <div class="flip-box">
-                        <div class="flip-box-inner">
-                            <div class="flip-box-front">
-                                <img class="img" src="<%= val.img %> " alt="hi">
-                            </div>
-                            <div class="flip-box-back">
-                                <p class="description"><%= val.description %> </p>
-                            </div>
+        <section>
+            <% theJournies.forEach((val,ind)=>{ %>
+            <% console.log(val.vidurl) %>
+            <div class="journies" data-aos="fade-up"
+            data-aos-anchor-placement="top-center">
+                <h3 class="h3"><%= val.name %> </h3>
+                <div class="flip-box container">
+                    <div class="flip-box-inner box">
+                        <div class="flip-box-front imgBx">
+                            <img class="img" src="<%= val.img %> " alt="hi">
+                        </div>
+                        <div class="flip-box-back contentBx">
+                            <p class="description"><%= val.description %> </p>
                         </div>
                     </div>
-                    
-                    <p class="date"><%= val.date %> </p>
-                    <a class="vid" href="<%= val.vidurl %> " target="_blank">lunching video</a>   
-                     
-
                 </div>
 
+                <p class="date"><%= val.date %> </p>
+                <a id="<%= ind %>" class="vid" href="<%= val.vidurl %> " target="_blank">
+                    <span></span>
+                    <span></span>
+                    lunching video</a>
 
-            <% }) %> 
-            
+
+            </div>
+
+
+            <% }) %>
+            <!-- <a class="vid" href="https://www.youtube.com/watch?v=bbHuo22R34I" >lunching video</a> -->
+
+
         </section>
     </main>
+
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
+    <!-- Magnific Popup core JS file -->
+    <script src="./yousef/jquery.magnific-popup.js"></script>
+    <script src="./yousef/yousef.js"></script>
 </body>
+
 </html>

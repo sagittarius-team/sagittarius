@@ -10,19 +10,12 @@ background-size: cover;
 }
 
 
-div.subCont {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid gray;
-    color: aliceblue;
-}
 div.mainCont {
     margin-top: 12%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     text-align: center;
-    flex-wrap: wrap;
     font-family: 'Roboto', sans-serif;
 
 }
@@ -36,23 +29,116 @@ img#man {
     right: 3%;
     top: 0;
     width: 10%;
-    animation: rots 2s ease-in-out infinite linear;
+    animation: rots 7s linear infinite;
 }
 
 
 @keyframes rots { 
-    0% { 
-        transform: translate(-20%,-20%); 
-    } 50% { 
-        transform: translate(-20%,0%); 
+    0% {
+        transform: translate(-20%,-20%);
     }
-    100%{
-        transform: translate(20%,0%); 
+    25% {
+        transform: translate(-40%,-9%);
+    }
+    50% {
+        transform: translate(-20%,0%);
+    }
+    75% {
+        transform: translate(-11%,-10%);
+    }
+    100% {
+        transform: translate(-20%,-20%);
     }
 }
 
-.subCont:hover {
-width: 20%;
-height: 20%;
+
+/* for fliiping */
+.subCont{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 1000px;
+    transform-style:preserve-3d ;
+    margin-bottom: 30px;
 }
+.subCont .subCont2{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    transform-style:preserve-3d ;
+
+}
+.subCont .subCont .imgCont{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-origin: top;
+      transform-style: preserve-3d;
+      transition: 1.5s ease-in-out;
+}
+.subCont .subCont2:hover .imgCont{
+    transform:translateY(-100%);
+    opacity: 0;
+}
+.subCont .subCont2 .imgCont img{
+    position: absolute;
+    top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.subCont .subCont2 .l{
+    position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: 1.5s ease-in-out;
+}
+.subCont .subCont2 .l1{
+    background-color: chartreuse;
+    transform:translateY(100%);
+}
+.subCont .subCont2:hover .l1{
+    background-color: chartreuse;
+    transform:translateY(-100%);
+}
+.subCont .subCont2 .l2{
+    background-color: blue;
+    transform:translateY(200%);
+}
+.subCont .subCont2:hover .l2{
+    background-color: blue;
+    transform:translateY(-100%);
+}
+
+.subCont .subCont2 .namecont{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 40px; */
+  color: white;
+  transform-origin: bottom;
+      transform-style: preserve-3d;
+      transition: 1.5s ease-in-out;
+      transform:translateY(300%);
+      opacity: 0;
+
+}
+.subCont .subCont2:hover .namecont{
+    transform:translateY(0%);
+  opacity: 1;
+}
+/* end of flipping */
 
