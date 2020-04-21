@@ -3,6 +3,7 @@ DROP TABLE IF EXISTS signup;
 DROP TABLE IF EXISTS signIn;
 DROP TABLE if EXISTS outlook;
 DROP TABLE if EXISTS booking;
+DROP TABLE if EXISTS today;
 -- Yosef
 CREATE TABLE mission (
     id SERIAL PRIMARY KEY,
@@ -59,3 +60,11 @@ CREATE TABLE signIn(
     isAgree VARCHAR(255),
     criedt NUMERIC 
 );
+CREATE TABLE today(
+    id SERIAL PRIMARY KEY,
+    image VARCHAR(255),
+    title VARCHAR(255),
+    description TEXT,
+    date VARCHAR(255)
+);
+
