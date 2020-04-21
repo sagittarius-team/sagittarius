@@ -4,32 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/public/reset.css">
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="./reset.css">
+    <!-- <link rel="stylesheet" href="./index.css"> -->
     <link rel="stylesheet" href="./esraa/login.css">
     <link rel="stylesheet" href="./esraa/sign.css">
+    <link rel="stylesheet" href="/header_abdallah.css">
 
- 
-
-   
 </head>
 <body>
-    
-<header class="headclass">
-<ul id="nav-elemnt">
-    <li><a href="/myProfile">profile</a> </li>
-    
-    <a href="/signup"><a href="#popup1">sign Up</a></a>
-    <a href="/login"><a href="#popup2">sign In</a></a>
-    |
-    |
-    <a href="/logout">logout</a>
-
-    <!-- /<a href="/login">Sign In</a> </li> -->
-</ul>
-
-</header>
-
+    <%- include('./layout/header_abdallah.ejs') %> 
 
 <%- include('./layout/signup.ejs')%>
 <%- include('./layout/login.ejs')%>
