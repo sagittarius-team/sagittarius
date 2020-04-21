@@ -2,8 +2,18 @@ body{
     background-color:#6d00a9 ;
     padding: 0;
     position: relative;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;    
+}
+ a {
+    color: white;
+    text-decoration: none;
+}
+
+ a:hover 
+{
+     color:white; 
+     text-decoration:none; 
+     cursor:pointer;  
 }
 button{
     cursor: pointer;
@@ -14,6 +24,7 @@ button{
     top: 4%;
     width: 44%;
     height: 78%;
+    border-radius: 0 14% 0 0;
     display: flex;
     flex-direction: column;
     margin-left: 31%;
