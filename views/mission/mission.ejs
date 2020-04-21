@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> -->
     <%- include('../layout/head.ejs') %> 
+    <link rel="stylesheet" href="./sun/sun.css">
 
 </head>
 <body>
     <header>
-        <%- include('../layout/header_abdallah.ejs') %> 
-        <%- include('../layout/signup.ejs')%>
-        <%- include('../layout/login.ejs')%>
     </header>
     <main>
         <form action="/show" method="GET" class="dateform">
@@ -20,6 +18,7 @@
             <button class="enter">Enter</button>
         </form>
     </main>
-    
+    <%- include('../sun.ejs') %> 
+    <script src="./sun/sun.js"></script>
 </body>
 </html>
