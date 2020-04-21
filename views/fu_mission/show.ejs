@@ -4,15 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Booking Trips</title>
 <link rel="stylesheet" href="../reset.css">
 
     <link rel="stylesheet" href="../bookinfos.css">
+    <!-- <link rel="stylesheet" href="./bookinfos.css"> -->
+    <link rel="stylesheet" href="./header_abdallah.css">
+    <link rel="stylesheet" href="./esraa/login.css">
+    <link rel="stylesheet" href="./esraa/sign.css">
+
 </head>
 
 <body>
     <header>
-        <!-- <%-  include('../layout/header.ejs')     %> -->
+
+        <%- include('../layout/header_abdallah.ejs') %> 
+        <%- include('../layout/signup.ejs')%>
+        <%- include('../layout/login.ejs')%>
+        
     </header>
     <main>
         <% data.forEach (val  =>{ %>

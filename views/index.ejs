@@ -7,10 +7,19 @@
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./esraa/login.css">
     <link rel="stylesheet" href="./esraa/sign.css">
+<<<<<<< HEAD
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="/header_abdallah.css">
     <link rel="stylesheet" href="./index.css">
+=======
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="/header_abdallah.css">
+
+>>>>>>> 39cce57fb37a6b1596bfcfae778a02fa052f4010
 
 </head>
 <body>
@@ -18,49 +27,67 @@
     
 <%- include('./layout/signup.ejs')%>
 <%- include('./layout/login.ejs')%>
-<!-- <header class="headclass">
-<ul id="nav-elemnt">
-    <li><a href="/myProfile">profile</a> </li>
+
+
+
+
+<main class="pic-head">
+    <div class="landing">
+<div class="home1">
+    <div class="home-inner">
+      
+
+
+    </div>
+</div>
+
+    </div>
     
-    <a href="/signup"><a href="#popup1">sign Up</a></a>
-    <a href="/login"><a href="#popup2">sign In</a></a>
-    |
-    |
-    <a href="/logout">logout</a> -->
-    <div id="body" class="home">
-        <div class="header">
-            <div>
-                <img class="sat" src="./future_img/satellite.png" alt="" class="satellite">
-                <div class="text">
-                    <h1>SAGITTARIUS</h1>
-                    <h2>SPACE TRIPS</h2>
-                    
-                   <a href="/signup"> <a href="#popup1" id="si" class="more">
-                        <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                        SGIN UP</a></a>
-                </div>
+</main>
+
+
+
+
+<div id="body" class="home">
+    <div class="header">
+        <div>
+            <div class="text">
+                <h1>SAGITTARIUS</h1>
+                <h2>SPACE TRIPS</h2>
                 
+               <a href="/signup"> <a href="#popup1" id="click" class="more">
+                    <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                    SIGN UP</a></a>
             </div>
+            
         </div>
-       
+    </div>
+
+
+
+
+
+
+
+   
+     
         <div class="down">
             <div class="between">
 <h2>This photo was taken by NASA on: <%= data.date %></h2>
             </div>	
             <div>
-                <img data-aos="zoom-in-right" class="todayI" src="<%= data.image%>" alt="today image">
-                <div data-aos="zoom-in-left" class="desc">
+                <img  class="todayI" src="<%= data.image%>" alt="today image">
+                <div class="desc">
                     <h2><%= data.title %></h2>
                     <p><%= data.description %></p>
 
                 </div>
                 
             </div>
-            <%- include('./layout/footer.ejs') %> 
-        </div>
+        </div> 
         
     </div>
     
@@ -70,10 +97,8 @@
             duration: 600
             });
       </script>
-    <!-- /<a href="/login">Sign In</a> </li> -->
-<!-- </ul> -->
+  
 
-<!-- </header> -->
 
 
 

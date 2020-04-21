@@ -99,10 +99,12 @@ function addDataBase(req, res) {
         .then(result => {
 
             if (result.rows[0]) {
+                console.log('validation if the user esist');
                 let vaildData = {text:'This Account Alredy Exsist' }
                 res.render('valid',{data: vaildData.text});
             }
             else {
+
                 let SQL = 'INSERT INTO signup (username,password,email,day,month,year,gender,isAgree,criedt) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9);';
                 let safeValues = [username, password, email, day, month, year, gender, isagree, criedt];
                 client.query(SQL, safeValues)
@@ -111,7 +113,9 @@ function addDataBase(req, res) {
                         let safeValues3 = [username];
                         client.query(SQL2, safeValues3)
                             .then(() => {
-                                res.render('./layout/login');
+                                // let vaildData = {text: 1}
+                                // res.render('header_abdallah',{data: vaildData.text});
+                                res.redirect('/');
                             });
                     });
             }
