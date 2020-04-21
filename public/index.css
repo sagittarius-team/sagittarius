@@ -14,6 +14,7 @@ background-color: black;
 }
 .header {
     background-image: url(./future_img/bg-home.jpg);
+    background-size: cover;
     background-attachment: fixed;
     height: 407px;    
 }
@@ -29,7 +30,7 @@ background-color: black;
     color: white;
     font-size: 32px;
     font-weight: bold;
-    text-shadow: 3px 4px #6D00A9;
+    text-shadow: 3px 4px #3e075d;
     letter-spacing: 5px;
 }
 .text h1{
@@ -52,6 +53,10 @@ box-shadow: 0 0 5px #6D00A9,
             0 0 25px #6D00A9,
             0 0 50px #6D00A9,
             0 0 200px #6D00A9;
+}
+#si {
+    text-decoration: none;
+    color: white;
 }
 a.more span{
     position: absolute;
@@ -190,7 +195,7 @@ color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #6D00A9;
+    background-color: #3e075d;
     width: 100%;
     height: 100px;
     margin: auto;

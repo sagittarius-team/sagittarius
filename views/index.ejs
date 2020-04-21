@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./esraa/login.css">
     <link rel="stylesheet" href="./esraa/sign.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="/header_abdallah.css">
+    <link rel="stylesheet" href="./index.css">
 
 </head>
 <body>
@@ -34,7 +35,7 @@
                     <h1>SAGITTARIUS</h1>
                     <h2>SPACE TRIPS</h2>
                     
-                   <a href="/signup"> <a href="#popup1" class="more">
+                   <a href="/signup"> <a href="#popup1" id="si" class="more">
                         <span></span>
                     <span></span>
                     <span></span>
@@ -64,7 +65,10 @@
     </div>
     
     <script>
-        AOS.init();
+        AOS.init({
+            offset:300,
+            duration: 600
+            });
       </script>
     <!-- /<a href="/login">Sign In</a> </li> -->
 <!-- </ul> -->
