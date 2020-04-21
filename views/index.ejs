@@ -3,43 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="./reset.css">
-    <!-- <link rel="stylesheet" href="./index.css"> -->
+    <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./esraa/login.css">
     <link rel="stylesheet" href="./esraa/sign.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="/header_abdallah.css">
+
 
 </head>
 <body>
     <%- include('./layout/header_abdallah.ejs') %> 
-<!-- <header class="headclass">
-<ul id="nav-elemnt">
-    <li><a href="/myProfile">profile</a> </li>
+
     
-    <a href="/signup"><a href="#popup1">sign Up</a></a>
-    <a href="/login"><a href="#popup2">sign In</a></a>
-    |
-    |
-    <a href="/logout">logout</a> -->
-    <div id="body" class="home">
-        <div class="header">
-            <div>
-                <img src="./future_img/satellite.png" alt="" class="satellite">
-                <h1>SAGITTARIUS</h1>
-                <h2>SPACE TRIPS</h2>
-                <a href="/load" class="more">SGIN UP</a>
-            </div>
-        </div>	
-    </div>
-
-    <!-- /<a href="/login">Sign In</a> </li> -->
-<!-- </ul> -->
-
-<!-- </header> -->
-
-
 <%- include('./layout/signup.ejs')%>
 <%- include('./layout/login.ejs')%>
+
+
+
+
+<main class="pic-head">
+    <div class="landing">
+<div class="home1">
+    <div class="home-inner">
+      
+
+
+    </div>
+</div>
+
+    </div>
+    
+</main>
+
+
+
+
+<div id="body" class="home">
+    <div class="header">
+        <div>
+            <div class="text">
+                <h1>SAGITTARIUS</h1>
+                <h2>SPACE TRIPS</h2>
+                
+               <a href="/signup"> <a href="#popup1" id="click" class="more">
+                    <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                    SIGN UP</a></a>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+
+
+
+
+   
+     
+        <div class="down">
+            <div class="between">
+<h2>This photo was taken by NASA on: <%= data.date %></h2>
+            </div>	
+            <div>
+                <img  class="todayI" src="<%= data.image%>" alt="today image">
+                <div class="desc">
+                    <h2><%= data.title %></h2>
+                    <p><%= data.description %></p>
+
+                </div>
+                
+            </div>
+        </div> 
+        
+    </div>
+    
+    <script>
+        AOS.init();
+      </script>
+  
+
+
+
 
 
 

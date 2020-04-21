@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/sagittarius-team/sagittarius#readme",
   "dependencies": {
+    "aos": "^2.3.4",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.2",
     "express": "^4.17.1",

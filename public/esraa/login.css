@@ -7,15 +7,16 @@
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: hidden;
+    transition: opacity 500ms; 
+    visibility: hidden; 
     opacity: 0;
+    z-index: 111;
   }
 
   .overlay2:target {
     visibility: visible;
     opacity: 1;
-    /* z-index: 999999; */
+    z-index: 999999;
   }
  
   .popup3 {
@@ -30,6 +31,7 @@
     flex-direction: column;
     /* line-height: 3px; */
     flex-wrap: wrap-reverse;
+    z-index: +999;
     box-shadow: 27px 7px 20px 0 rgba(0, 0, 0, 0.6);
     transition: all 1s ease-in-out;
     overflow: hidden;
@@ -45,16 +47,14 @@
     font-weight: bold;
     text-decoration: none;
     color: #333;
-    z-index: 99999;
+    z-index: +99999;
   }
   .popup3 .close2:hover {
     color: white;
     transform: scale(1.1);
     /* font-size: 45px; */
-
-   
-
-
+    top: 7px;
+    right: 20px;
 
     
   }
@@ -143,6 +143,7 @@
  
 #showOrders2{
     position: absolute;
+    /* z-index: +999; */
     left: 95px;
     display: flex;
     top: 2%;
@@ -175,18 +176,19 @@
     color: #fff;
     border-radius: 20px;
     text-align: center;
-    padding: 10px;
-    width: 65%;
-    height: 11%;
+    padding: 13px;
+    width: 102%;
+    height: 23%;
     border: none;
     font-size: 20px;
     cursor: pointer;
-    margin-left: 36px;
+    margin-left: -4px;
     margin-top: 10px;
     background-color: #6d009a;
-
-
 }
+
+
+
 .signIn-btn2:hover{
     border: none;
     box-shadow: 0px 0px 13px  #d995f7 ;
@@ -243,6 +245,7 @@
 .imageMan {
     pointer-events: none;
     position: absolute;
+    /* z-index: 999999; */
     left: 74%;
     top: -11%;
     animation: rocket1 7s linear infinite;

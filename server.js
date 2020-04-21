@@ -38,6 +38,7 @@ app.get('/signup',signUpPage);
 app.get('/logout',logutPage)
 app.get('/load' ,loadFunc);
 
+
 // Esraa 
 
 function loadFunc(req,res){
@@ -53,7 +54,7 @@ function myprofile(req, res) {
                 res.render('profile', { taskResult: result.rows[0] })
             }
             else {
-                res.render('login');
+                res.render('./layout/login');
             }
         });
 }
@@ -62,7 +63,31 @@ function signUpPage(req,res){
 }
 
 function homePage(req, res) {
-  res.render('index');
+    let today = new Date().toJSON().slice(0,10).replace(/-/g,'-');
+    let SQL2 = 'SELECT * FROM today WHERE date=$1;';
+    let safeValues2 = [today];
+    client.query(SQL2,safeValues2)
+    .then(result =>{
+        if(result.rows[0]){
+            console.log('t database');
+            res.render('index',{data: result.rows[0]});
+        }
+        else{
+            console.log('t API');
+            let key = process.env.NASA_KEY;
+            let url = `https://api.nasa.gov/planetary/apod?api_key=${key}`;
+            superagent.get(url)
+            .then(result =>{
+                let data = new TodayImage(result.body);
+                let SQL = 'INSERT INTO today (image,title,description,date) VALUES ($1,$2,$3,$4);';
+                let safeValues = [data.image,data.title,data.description,data.date];
+                client.query(SQL,safeValues);
+                res.render('index',{data: data });
+            });
+        }
+    })
+
+    
 }
 //this route for post my data i hada insert it in sign page into my data pase
 function addDataBase(req, res) {
@@ -74,9 +99,12 @@ function addDataBase(req, res) {
         .then(result => {
 
             if (result.rows[0]) {
-                res.render('valid');
+                console.log('validation if the user esist');
+                let vaildData = {text:'This Account Alredy Exsist' }
+                res.render('valid',{data: vaildData.text});
             }
             else {
+
                 let SQL = 'INSERT INTO signup (username,password,email,day,month,year,gender,isAgree,criedt) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9);';
                 let safeValues = [username, password, email, day, month, year, gender, isagree, criedt];
                 client.query(SQL, safeValues)
@@ -85,7 +113,9 @@ function addDataBase(req, res) {
                         let safeValues3 = [username];
                         client.query(SQL2, safeValues3)
                             .then(() => {
-                                res.render('login');
+                                // let vaildData = {text: 1}
+                                // res.render('header_abdallah',{data: vaildData.text});
+                                res.redirect('/');
                             });
                     });
             }
@@ -93,7 +123,7 @@ function addDataBase(req, res) {
         });
 }
 function loginpage(req, res) {
-    res.render('login');
+    res.render('./layout/login');
 }
 
 function validLogIn(req, res) {
@@ -112,7 +142,8 @@ function validLogIn(req, res) {
                     myprofile(req, res);
                 }
              else {
-                res.render('valid');
+                 let vaildData = {text:'Your Password or Email uncorrect' }
+                res.render('valid',{data: vaildData.text});
             }
         });
 }
@@ -232,7 +263,7 @@ function booking(req, res) {
         }
         else {
             renderBookDataBase(req,res);
-            res.render('login');
+            res.render('./layout/login');
         }
     })
   
@@ -277,6 +308,13 @@ function Fulure(val) {
     this.image = val.rocket.imageURL;
     this.agencies = val.location.pads[0].agencies&&val.location.pads[0].agencies[0].name || '';
     this.description = (val.missions[0] && val.missions[0].description) || 'There is no description';
+}
+/// costructur for img today
+function TodayImage(data){
+    this.image = data.url;
+    this.title = data.title;
+    this.description = data.explanation;
+    this.date = data.date;
 }
 
 
