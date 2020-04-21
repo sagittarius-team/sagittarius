@@ -151,7 +151,7 @@
     left: 52%;
     display: flex;
     flex-grow: 1;
-    top: -3%;
+    top: 7%;
     color: white;
     line-height: 39px;
     font-style: auto;
@@ -178,18 +178,20 @@
     border-radius: 20px;
     text-align: center;
     padding: 10px;
-    width: 84%;
+    width: 15%;
+    position: fixed;
     box-sizing: border-box;
-    height: 11%;
+    height: 6%;
     border: none;
     font-size: 20px;
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: -8px;
     margin-top: 10px;
     background-color: #6d009a;
-
-
 }
+
+
+
 .signUp-btn1:hover{
     border: none;
     box-shadow: 0px 0px 13px  #d995f7 ;

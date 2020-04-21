@@ -2,5 +2,260 @@ body{
     background-color:#6d00a9 ;
     padding: 0;
     position: relative;
+    box-sizing: border-box;    
+}
+ a {
+    color: white;
+    text-decoration: none;
+}
+
+ a:hover 
+{
+     color:white; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+button{
+    cursor: pointer;
+}
+
+.profiles{
+    position: absolute;
+    top: 4%;
+    width: 44%;
+    height: 78%;
+    border-radius: 0 14% 0 0;
+    display: flex;
+    flex-direction: column;
+    margin-left: 31%;
+    line-height: 44px;
+    color: black;
+    font-size: 23px;
+    border: 3px solid;
+    background: whitesmoke;
+    padding: 3% 6%;
+
+}
+
+.input-pro{
+    width: 540px;
+    height: 63px;
+    background: none;
+    padding: 9px 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    border: 1px solid #6d00a9;
+    font-weight: bolder;
+    white-space: 30px;
     
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 2px;
+}
+
+.profiles button{
+    position: inherit;
+    width: 201px;
+    height: 52px;
+    border: none;
+    border-radius: 5px;
+   
+    top: 88%;
+    left: 72%;
+    background: rgb(76, 146, 7);
+    color: white;
+    font-size: 74%;
+}
+
+.profiles button:hover{
+    border: none;
+    background-color: rgb(129, 206, 52);
+    transform: scale(1.09);
+
+}
+
+
+.all-pro{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    display: flex;
+    flex-direction: row;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+   
+}
+
+.profiles h2{
+    font-weight: unset;
+    font-family: 'Cormorant Garamond', serif;
+    margin-top: -15px;
+}
+
+.profiles p{
+    margin-top: -4%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 81%;
+}
+
+.opcity-pro{
+    
+    margin-top: 0px;
+    /* margin-bottom: 0px; */
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 500ms;
+    width: 448px;
+    height: 100%;
+    width: 357px;
+
+}
+
+.astronaut{
+    
+    z-index: 999;
+    /* background: yellow; */
+    display: flex;
+    width: 96%;
+    height: 75%;
+    margin: 9% auto 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.astronaut img{
+    margin-bottom: 23px;
+    height: 172px;
+
+}
+.btn{
+   display: flex; 
+}
+
+.btn button{
+    margin: 0px 16px;
+    height: 41px;
+    width: 97px;
+    font-size: 16px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+    font-family: 'Roboto Slab', serif;
+}
+
+.btn .msg1{
+background-color:rgb(229, 5, 2);
+border: none;
+}
+.btn .msg2{
+background-color: rgb(76, 146, 7);
+border: none;
+}
+
+
+.input-pro:active , .input-pro:focus{
+    
+    border-left:7px solid  rgb(76, 146, 7);
+    background-color: white;
+    /* border: 2px solid #6d00a9; */
+ 
+}
+
+.btn button:hover{
+    
+    transform:scale(1.1);
+
+}
+
+.row-hr{
+    color: rgb(186, 208, 209);
+    display: flex;
+    margin-top: 7%;
+    
+    margin-left: -12%;
+    align-items: inherit;
+}
+.row-hr p{
+    position: inherit;
+    margin-top: 4%;
+    color: gray;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: monospace;
+}
+
+hr{
+    width: 241px;
+    border-top: 1px gray;
+}
+
+.nav-prof{
+    height: 50%;
+    border-bottom: 1px solid gray;
+    width: 86%;
+    padding: 0px 12px;
+    display: flex;
+    align-items: flex-end;
+    margin: 8px;
+    margin-bottom: 12px;
+    margin-left: -28px;
+
+}
+.all-nav{
+    list-style-type: none;
+    position: relative;
+    /* background: salmon; */
+    width: 93%;
+    display: flex;
+    flex-direction: column;
+    line-height: 32px;
+
+
+}
+.nav-prof:hover{
+
+border-bottom: 4px solid #6d00a9;
+height: 50%;
+width: 86%;
+
+
+}
+
+
+
+
+.nav-prof img{
+    height: 20px;
+    /* background: gray; */
+    border-radius: 8px;
+    margin-right: 48px;
+    
+}
+.nav-prof p{
+    letter-spacing: 3px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+}
+
+
+.input-Birth{
+    width: 15%;
+    height: 55%;
+    padding: 9px 8px;
+    height: 44px;
+    background: none;
+    padding: 9px 8px;
+    margin: 1%;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #6d00a9;
+    font-weight: bolder;
+    white-space: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 2px;
+
 }
