@@ -8,7 +8,7 @@ body , html{
     width: auto;
     background-color: black;
     background-image: url('../images/cluster-of-stars-1341279.jpg');
-    background-size: cover;
+    background-size: contain;
     box-sizing: border-box;
     font-family: audiowide-regular-webfont;
 
@@ -75,7 +75,7 @@ section{
 }
 .journies{
     border-radius: 15px;
-    background-color: rgba(65, 49, 68, 0.5);
+    background-color: rgba(159, 89, 173, 0.5);
     box-shadow: 10px 14px 10px #493d4a;
     display: flex;
     flex-direction: column;
