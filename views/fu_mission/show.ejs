@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./bookinfos.css">
+<link rel="stylesheet" href="../reset.css">
+
+    <link rel="stylesheet" href="../bookinfos.css">
 </head>
 
 <body>
@@ -17,10 +19,10 @@
         <div>
             <h1> <%= val.name %></h1>
             <img src="<%= val.image %>" alt="">
-            <p> <%= val.net  %></p>
-            <p> <%= val.agencies%> </p>
-            <p> <%=val.description%> </p>
-            <p>cost: <%= val.cost%> $</p>
+            <p class="pad"> <%= val.net  %></p>
+            <p class="pad"> <%= val.agencies%> </p>
+            <p class="pad"> <%=val.description%> </p>
+            <p class="pad sp">cost: <%= val.cost%> $</p>
             <form action="/delete/<%= val.id%>?_method=delete" method="post">
             <button type="submit">delete</button>
             </form>
