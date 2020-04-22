@@ -32,12 +32,12 @@ a{
     text-align: center;
     margin-top: 50px;
 }
-.allp .h3{
-    color: #CA9E9E;
-    height: 20px;
-    padding: 20px;
-    font-size: 18px;
-    font-weight: 700;
+.allp .agencies, .h3 ,.allp .net{
+    color: #CA9E9E !important;
+    height: 20px !important;
+    padding: 20px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
 }
 .ds{
     height: 130px;
