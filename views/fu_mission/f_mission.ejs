@@ -4,17 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../future.css">
+    
+    <link rel="stylesheet" href="./future.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./header_abdallah.css">
     <link rel="stylesheet" href="./esraa/login.css">
     <link rel="stylesheet" href="./esraa/sign.css">
+    
     <title>Document</title>
 </head>
 
 <body>
 
-    <!-- <%- include('../layout/header_abdallah.ejs') %>  -->
+    <%- include('../layout/header_abdallah.ejs') %>
+    <%- include('../layout/signup.ejs')%>
+    <%- include('../layout/login.ejs')%>
     <main class="container">
         <section class="card"   data-aos="fade-left">
             <% all_future_moission.forEach (val  =>{ %>
@@ -22,7 +26,7 @@
                 <h3 class="h3"> <%= val.name %></h3>
                  <img class="img1" src="<%= val.image %>" alt="rocket">
                      <div class="allp">
-                         <p > <%= val.net %></p>
+                         <p class="net" > <%= val.net %></p>
                          <p class="agencies"> <%= val.agencies%> </p>
                          <p class="ds"> <%=val.description %> </p>
                          <p class="cash">cost: <%= val.cost%> <span>$</span> </p>
