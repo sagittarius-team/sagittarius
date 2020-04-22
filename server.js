@@ -70,7 +70,13 @@ function homePage(req, res) {
     .then(result =>{
         if(result.rows[0]){
             console.log('t database');
-            res.render('index',{data: result.rows[0]});
+    //         let SQL8 = 'SELECT * FROM signIn;';
+    // client.query(SQL8)
+    // .then(check =>{
+    //     console.log('ch ',check.rows);
+    //     res.render('index',{data: result.rows[0], check: check.rows});
+    // });
+    res.render('index',{data: result.rows[0]});    
         }
         else{
             console.log('t API');
@@ -82,12 +88,17 @@ function homePage(req, res) {
                 let SQL = 'INSERT INTO today (image,title,description,date) VALUES ($1,$2,$3,$4);';
                 let safeValues = [data.image,data.title,data.description,data.date];
                 client.query(SQL,safeValues);
-                res.render('index',{data: data });
-            });
-        }
-    })
+    //             let SQL8 = 'SELECT * FROM signIn;';
+    // client.query(SQL8)
+    // .then(check =>{
+    //     console.log('ch ',check.rows);
+        // res.render('index',{data: result.rows[0], check: check.rows});
+            // });
 
-    
+            res.render('index',{data: data});
+        }
+    );
+}});
 }
 //this route for post my data i hada insert it in sign page into my data pase
 function addDataBase(req, res) {
@@ -100,7 +111,7 @@ function addDataBase(req, res) {
 
             if (result.rows[0]) {
                 console.log('validation if the user esist');
-                let vaildData = {text:'This Account Alredy Exsist' }
+                let vaildData = {text:'This Account Already Exsist' }
                 res.render('valid',{data: vaildData.text});
             }
             else {

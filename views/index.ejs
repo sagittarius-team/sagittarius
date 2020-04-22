@@ -1,103 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="shortcut icon" href="./image/tab-01.png" />
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./esraa/login.css">
     <link rel="stylesheet" href="./esraa/sign.css">
-<<<<<<< HEAD
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="/header_abdallah.css">
     <link rel="stylesheet" href="./index.css">
-=======
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <link rel="stylesheet" href="/header_abdallah.css">
-
->>>>>>> 39cce57fb37a6b1596bfcfae778a02fa052f4010
 
 </head>
+
 <body>
-    <%- include('./layout/header_abdallah.ejs') %> 
-    
-<%- include('./layout/signup.ejs')%>
-<%- include('./layout/login.ejs')%>
+    <%- include('./layout/header_abdallah.ejs') %>
+
+    <%- include('./layout/signup.ejs')%>
+    <%- include('./layout/login.ejs')%>
+
+    <main class="pic-head">
+        <div class="landing">
+            <div class="home1">
+                <div class="home-inner">
 
 
-
-
-<main class="pic-head">
-    <div class="landing">
-<div class="home1">
-    <div class="home-inner">
-      
-
-
-    </div>
-</div>
-
-    </div>
-    
-</main>
-
-
-
-
-<div id="body" class="home">
-    <div class="header">
-        <div>
-            <div class="text">
-                <h1>SAGITTARIUS</h1>
-                <h2>SPACE TRIPS</h2>
-                
-               <a href="/signup"> <a href="#popup1" id="click" class="more">
-                    <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                    SIGN UP</a></a>
-            </div>
-            
-        </div>
-    </div>
-
-
-
-
-
-
-
-   
-     
-        <div class="down">
-            <div class="between">
-<h2>This photo was taken by NASA on: <%= data.date %></h2>
-            </div>	
-            <div>
-                <img  class="todayI" src="<%= data.image%>" alt="today image">
-                <div class="desc">
-                    <h2><%= data.title %></h2>
-                    <p><%= data.description %></p>
 
                 </div>
-                
             </div>
-        </div> 
-        
+
+        </div>
+
+    </main>
+    <div id="body" class="home">
+        <div class="header">
+            <div>
+                <div class="text">
+                    <h1>SAGITTARIUS</h1>
+                    <h2>SPACE TRIPS</h2>
+
+                    <a href="/signup"> <a href="#popup1" id="click" class="more">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            SIGN UP</a></a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="down">
+            <div class="between">
+                <h2>This photo was taken by NASA on: <%= data.date %></h2>
+                <h2><%= data.title %></h2>
+            </div>
+            <div>
+                <div class="desc">
+                    <img data-aos="zoom-in-up" class="todayI" src="<%= data.image%>" alt="today image">
+                    <p data-aos="zoom-in-up"><%= data.description %></p>
+
+                </div>
+
+            </div>
+        </div>
+
     </div>
-    
+    <%- include('./layout/footer.ejs')%>
+   
+
     <script>
         AOS.init({
-            offset:300,
-            duration: 600
-            });
-      </script>
-  
+            offset: 100,
+            duration: 400
+        });
+    </script>
 
 
 
@@ -128,7 +108,9 @@
 
 
 
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-<script src="/js/ind.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="/js/ind.js"></script>
 </body>
+
 </html>

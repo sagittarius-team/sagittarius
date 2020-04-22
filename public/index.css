@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@font-face {
+    font-family: ‘audiowide-regular-webfont’;
+    src: url(‘./fonts/audiowide-regular-webfont.eot’);
+    src: url(‘./fonts/audiowide-regular-webfont.woff’) format(‘woff’), url(‘./fonts/audiowide-regular-webfont.ttf’) format(‘truetype’), url(‘./fonts/audiowide-regular-webfont.svg’) format(‘svg’);
+}
 
 
-     
+
+body {
+    background-color: #f5b2dd;
+    height: 100vh;
+}
+.header {
+    height: 38vh;
+}
 .header div{
     display: flex;
     justify-content: space-evenly;
@@ -40,7 +53,8 @@ margin-top: -20%;
     border: 1px solid white;
     border-radius: 5%;
     border-radius: 1px solid white;
-    box-shadow: 1px 2px gray;
+    box-shadow: 1px 2px gray,
+                1px 3px gray;
     z-index: 1;
 
 }
@@ -133,11 +147,74 @@ a:hover{
     cursor: pointer;
 }
 
+.down {
+    background-image: url(./image/paul-volkmer-_Apdet7E5yU-unsplash.jpg);
+    background-size: cover;
+    color: whitesmoke;
+}
 .todayI {
-    width: 80%;
+    width: 40%;
+    object-fit: contain;
 }
 
-
+.between h2 {
+    font-size: 2.4em;
+    padding-top: 3%;
+    text-align: center;
+    font-weight: bold;
+    
+}
+.between h2:first-child  {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid #6D00A9; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.8s steps(40, end),
+      blink-caret 1.8s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #6D00A9; }
+  }
+.between h2:nth-child(2) {
+    font-size: 7em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(./image/jeremy-thomas-4dpAqfTbvKA-unsplash.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 137px;
+    text-align: center;
+    align-items: center;
+    line-height: 115px;
+    font-weight: 1000;
+}
+.desc {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+   
+}
+.desc p {
+    text-align: center;
+    width: 40%;
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 183%;
+    /* font-family: audiowide-regular-webfont; */
+}
 
 /* 
 .sat{
