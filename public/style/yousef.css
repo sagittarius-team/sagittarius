@@ -194,3 +194,13 @@ p.date{
         display: block;
     }
 }
+#navigation {
+    display: flex;
+    flex-direction: row;
+    padding-right: 0%;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    font-size: 20px;
+    z-index: 9;
+}
