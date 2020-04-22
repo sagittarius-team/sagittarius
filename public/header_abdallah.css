@@ -5,7 +5,7 @@ body{
   margin: 0;
   padding: 0;
   
-  height: 10000px;
+  height: 100vh;
   position: relative;
     line-height: 40px;
   overflow:scroll;
@@ -40,12 +40,19 @@ align-items: center;
     }
 
     
- .menu1 {
-  transform: rotate(90deg);
-  font-size: 27px;
+ .menu1 img{
+  
   font-weight: 800;
   font-family: sans-serif;
-  margin-top: 1%;
+  margin-top: 26%;
+  height: 25px;
+  width: 30px;
+  margin-left: 17px;
+  opacity: .7;
+}
+
+.menu1 img:hover ,.menu1 img:active{
+  opacity: 1;
 }
 
 /* كل اللي فوق فقط navigation */
@@ -117,14 +124,19 @@ align-items: center;
 
   .overlay3{
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    top: 71px;
+    
+    left: 80%;
+    height: 325px;
+    width: 263px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
     background: rgba(0, 0, 0, 0.7);
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+
   }
 
   .overlay3:target {
@@ -132,21 +144,33 @@ align-items: center;
     opacity: 1;
     z-index: 999999; 
   }
+.overlay3 img{
+  transform: rotate(180deg);
+  width: 30px;
+  /* left: 14px; */
+  margin-left: 78%;
+  margin-top: -5.5%;
+  z-index: -99;
 
+}
 
   .dropdown-content{
         /* margin: 97px auto; */
     /* background: linear-gradient(rgb(243, 226, 242),#6d00a9,#190027); */
-    width: 16%;
-    height: 35%;
+    width: 99%;
+    height: 92%;
     position: relative;
-    left: 84%;
-    top: 10%;
+    left: 1%;
+    top: -6.5%;
     display: flex;
+    /* border: 1px solid white; */
+    border-top: 4px solid #cbcbcb;
+    border-bottom: 4px solid #cbcbcb;
     flex-direction: column;
-    box-shadow: 27px 7px 20px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 37px 7px 32px 0 rgba(0, 0, 0, .9);
     transition: all 1s ease-in-out;
     overflow: hidden;
+    z-index: 99;
     /* animation: signUp 0.2s linear 1; */
 }
 
@@ -154,13 +178,17 @@ align-items: center;
 
 
   .drop-menu{
-    border: 1px solid white;
+    background-color: black;
+    opacity: .5;
+    border: 1px solid #cbcbcb;
     width: 99%;
     height: 24%;
     display: flex;
+    /* color: black; */
     justify-content: center;
     align-items: center;
     font-size: 21px;
+    padding-bottom: 1px;
   }
 
   .dropdown-content a{
@@ -181,11 +209,16 @@ align-items: center;
   .drop-menu:active , .drop-menu:focus {
     transform: scale(1.1);
     color: black;
-    background-color: white;
+    background-color: #cbcbcb;
     /* border: 4px solid linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); */
  
 }
 .drop-menu:hover{
   transform: scale(1.1);
-  background:linear-gradient(to right,#6d00a9,rgb(189, 176, 176),indigo,violet);
+  opacity: 1;
+  box-sizing: border-box;
+  /* background-color: #ffff; */
+  border-left: 4px solid #cbcbcb; 
+  border-right: 4px solid #cbcbcb; 
+   /* background:linear-gradient(to right,#6d00a9,rgb(189, 176, 176),indigo,violet); */
 }
