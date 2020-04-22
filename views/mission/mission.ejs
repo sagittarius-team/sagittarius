@@ -6,11 +6,17 @@
     <title>Document</title> -->
     <%- include('../layout/head.ejs') %> 
     <link rel="stylesheet" href="./sun/sun.css">
+    <link rel="stylesheet" href="./esraa/login.css">
+    <link rel="stylesheet" href="./esraa/sign.css">
+
 
 </head>
 <body>
-    <header>
-    </header>
+    <%- include('../layout/header_abdallah.ejs') %> 
+
+    
+    <%- include('../layout/signup.ejs')%>
+    <%- include('../layout/login.ejs')%>
     <main>
         <form action="/show" method="GET" class="dateform">
             <label for="date" class="datelabel">Enter the Date</label>
