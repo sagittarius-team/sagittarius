@@ -15,7 +15,9 @@ body , html{
 a{
     text-decoration: none;
 }
-
+main{
+    font-family: audiowide-regular-webfont;
+}
 .card{
     display: flex;
     flex-wrap: wrap;
@@ -24,7 +26,7 @@ a{
 .card .form {
     border-radius: 15px;
     background-color: rgba(159, 89, 173, 0.5);
-    box-shadow: 10px 14px 10px #493D4A;
+    box-shadow: 6px 4px 9px 2px #493D4A;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,9 +48,10 @@ a{
 }
 /* for video button */
 .booking{
+    border: none;
     position: relative;
     margin-top: 25px;
-    background-color:rgb(43, 40, 40);
+    background-color: rgb(23, 21, 21);
     color: rgb(133, 92, 129);
     cursor: pointer;
     padding: 15px 30px;
@@ -135,6 +138,7 @@ a{
     height: 40px;
 }
 .cash {
+    
     font-size: 23px;
     margin-bottom: -10px;
 }

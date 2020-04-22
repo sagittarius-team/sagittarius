@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 @font-face {
-    font-family: ‘audiowide-regular-webfont’;
-    src: url(‘./fonts/audiowide-regular-webfont.eot’);
-    src: url(‘./fonts/audiowide-regular-webfont.woff’) format(‘woff’), url(‘./fonts/audiowide-regular-webfont.ttf’) format(‘truetype’), url(‘./fonts/audiowide-regular-webfont.svg’) format(‘svg’);
+    font-family: 'audiowide-regular-webfont';
+    src: url('../fonts/audiowide-regular-webfont.eot');
+    src: url('../fonts/audiowide-regular-webfont.woff') format('woff'), url('../fonts/audiowide-regular-webfont.ttf') format('truetype'), url('../fonts/audiowide-regular-webfont.svg') format('svg');
 }
 
 
@@ -34,12 +34,15 @@ margin-top: -20%;
     letter-spacing: 5px;
 }
 .text h1{
+    font-family: audiowide-regular-webfont;
     font-size: 85px;
     text-indent: 5px;
     letter-spacing: 15px;
     margin-bottom: 5%;
 }
-
+.text h2{
+    font-family: audiowide-regular-webfont;
+}
 .more {
     height: 14%;
     border: black;
@@ -148,7 +151,7 @@ a:hover{
 }
 
 .down {
-    background-image: url(./image/paul-volkmer-_Apdet7E5yU-unsplash.jpg);
+    background-image: url('./image/paul-volkmer-_Apdet7E5yU-unsplash.jpg');
     background-size: cover;
     color: whitesmoke;
 }
@@ -190,10 +193,10 @@ a:hover{
     font-size: 7em;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: url(./image/jeremy-thomas-4dpAqfTbvKA-unsplash.jpg);
+    background-image: url('./image/jeremy-thomas-4dpAqfTbvKA-unsplash.jpg');
     background-attachment: fixed;
     background-size: cover;
-    height: 137px;
+    height: 265px;
     text-align: center;
     align-items: center;
     line-height: 115px;
@@ -215,6 +218,14 @@ a:hover{
     line-height: 183%;
     /* font-family: audiowide-regular-webfont; */
 }
+.myheader1{
+    position: absolute;
+    width: 100%;
+    height: 73px;
+    background: black;
+    opacity: .8;
+  
+  }
 
 /* 
 .sat{

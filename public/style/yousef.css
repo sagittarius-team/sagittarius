@@ -9,8 +9,11 @@ body , html{
     width: auto;
     background-color: black;
     background-image: url('../images/cluster-of-stars-1341279.jpg');
-    background-size: contain;
+    background-size: cover;
     box-sizing: border-box;
+    
+}
+main{
     font-family: audiowide-regular-webfont;
 
 }
@@ -23,7 +26,7 @@ a{
 
     border-radius: 15px;
     background-color: rgba(65, 49, 68, 0.5);
-    box-shadow: 10px 14px 10px #493d4a;
+    box-shadow: 2px 2px 2px 2px #493d4a;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +35,7 @@ a{
     margin: 50px auto;
 }
 .datelabel{
-    margin-top: 50px;
+    margin-top: 35px;
     font-size: 150%;
     color: lightgray;
 
@@ -59,7 +62,7 @@ a{
     margin: auto;
     width: 20%;
     text-align: center;
-    margin-top: 30px;
+    margin: 30px;
     font-size: 100%;
     padding: .7em 0;
     background-color: rgb(101, 57, 115);
@@ -78,7 +81,7 @@ a{
 .journies{
     border-radius: 15px;
     background-color: rgba(159, 89, 173, 0.5);
-    box-shadow: 10px 14px 10px #493d4a;
+    box-shadow: 6px 4px 9px 2px #493D4A;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,7 +107,7 @@ a{
 .vid{
     position: relative;
     margin-top: 25px;
-    background-color:rgb(43, 40, 40);
+    background-color: rgb(23, 21, 21);
     color: rgb(133, 92, 129);
     cursor: pointer;
     padding: 15px 5px;
@@ -193,4 +196,14 @@ p.date{
     .hi {
         display: block;
     }
+}
+#navigation {
+    display: flex;
+    flex-direction: row;
+    padding-right: 0%;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    font-size: 20px;
+    z-index: 9;
 }

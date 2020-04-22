@@ -1,8 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+/* @font-face {
+    font-family: 'audiowide-regular-webfont';
+    src: url('../fonts/audiowide-regular-webfont.eot');
+    src: url('../fonts/audiowide-regular-webfont.woff') format('woff'), url('../fonts/audiowide-regular-webfont.ttf') format('truetype'), url('../fonts/audiowide-regular-webfont.svg') format('svg');
+} */
+
+
 body{
     background-color:#9781a3 ;
     padding: 0;
     position: relative;
-    box-sizing: border-box;    
+    box-sizing: border-box;   
+    /* font-family: audiowide-regular-webfont; */
+    font-family: 'Roboto Slab', serif;
+
 }
  a {
     color: white;
@@ -31,11 +43,11 @@ button{
     cursor: pointer;
 }
 
-.profiles{
+.profiles {
     background: black;
     position: absolute;
     top: 4%;
-    width: 28%;
+    width: 33%;
     height: 57%;
     /* border-radius: 0 14% 0 0; */
     display: flex;
@@ -48,15 +60,14 @@ button{
     left: 7%;
     /* border: 3px solid; */
     background: #170222;
-    padding: 3% 6%;
+    padding: 3% 3%;
     color: white;
     opacity: .7;
     box-shadow: 6px -2px 15px rgba(255,255,255,0.95), 3px 3px 6px rgba(0,0,0,0.7);
-
 }
 
 .input-pro{
-    width: 515px;
+    width: 280px;
     height: 52px;
     background: none;
     padding: 9px 8px;
@@ -73,14 +84,14 @@ button{
     margin-bottom: 4%;
 }
 
-.profiles button{
+.profiles button {
     position: inherit;
-    width: 172px;
+    width: 122px;
     height: 52px;
     border: none;
     border-radius: 5px;
     top: 84%;
-    left: 69%;
+    left: 72%;
     background: #6d00a9;
     color: white;
     font-size: 74%;
@@ -100,6 +111,7 @@ button{
 
 
 .all-pro{
+    font-family: 'Roboto Slab', serif;
     position: fixed;
     top: 0%;
     left: 0%;
@@ -109,7 +121,14 @@ button{
     flex-direction: row;
     background: rgba(0, 0, 0, 0.7);
     transition: opacity 500ms;
+    background-image: url('../images/astronaut-1920x1080-stars-space-galaxy-5k-17812.jpg');
+    background-size: cover;
    
+}
+.bg{
+    width: 100%;
+    z-index: -9;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .profiles h2{
@@ -145,7 +164,7 @@ button{
     display: flex;
     width: 96%;
     height: 75%;
-    margin: 9% auto 0;
+    padding-top: 6%;
     flex-direction: column;
     align-items: center;
 }
@@ -226,7 +245,7 @@ hr{
     padding: 0px 12px;
     display: flex;
     align-items: flex-end;
-    margin: 8px;
+    margin: 4px;
     margin-bottom: 12px;
     margin-left: -28px;
 
@@ -263,17 +282,17 @@ width: 86%;
 }
 .nav-prof p{
     letter-spacing: 3px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bolder;
     color: white;
 }
 
 
 .input-Birth{
-    width: 15%;
+    width: 18%;
     height: 55%;
     padding: 9px 8px;
-    height: 44px;
+    height: 35px;
     background: none;
     padding: 9px 8px;
     margin: 1%;
@@ -302,7 +321,7 @@ width: 86%;
 .extra22{
     position: relative;
     display: flex;
-    margin-left: -4%;
+    margin-left: 2%;
     justify-content: flex-start;
     padding: 0 0px;
 }
@@ -324,7 +343,7 @@ width: 86%;
     text-align: center;
     margin: 0 69px;
     border-radius: 15px;
-    box-shadow: -2px -2px 3px rgba(255,255,255,0.05), 3px 3px 3px rgba(0,0,0,0.2);
+    box-shadow: -2px -2px 3px rgba(255,255,255,0.7), 3px 3px 3px rgba(0,0,0,.2);
     
 
 }
