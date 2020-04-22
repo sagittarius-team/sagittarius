@@ -35,6 +35,23 @@ inputs.forEach((input) => {
     
 });
 
-$('.close2').onClick(() =>{
-    $('#popup2').hide();
-})
+
+
+
+$(document).ready(function(){
+    $(".myInput").on("input", function(){
+        // Print entered value in a div box
+     let newVal =$("#result").val();
+     console.log('hiesraa');
+      if (newVal !== null){
+        $('.contain33').show(function(){
+            $('.eye1').toggle();
+        });
+     } 
+        else{
+            $('.contain33').hide();
+        }
+           
+       
+    });
+});
