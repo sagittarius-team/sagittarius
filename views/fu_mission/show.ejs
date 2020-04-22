@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="../reset.css">
 
     <link rel="stylesheet" href="../bookinfos.css">
+    <link rel="stylesheet" href="../future.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- <link rel="stylesheet" href="./bookinfos.css"> -->
     <link rel="stylesheet" href="./header_abdallah.css">
     <link rel="stylesheet" href="./esraa/login.css">
@@ -16,32 +18,43 @@
 </head>
 
 <body>
-    <header>
 
-        <%- include('../layout/header_abdallah.ejs') %> 
-        <%- include('../layout/signup.ejs')%>
-        <%- include('../layout/login.ejs')%>
-        
-    </header>
-    <main>
-        <% data.forEach (val  =>{ %>
-        <div>
-            <h1> <%= val.name %></h1>
-            <img src="<%= val.image %>" alt="">
-            <p class="pad"> <%= val.net  %></p>
-            <p class="pad"> <%= val.agencies%> </p>
-            <p class="pad"> <%=val.description%> </p>
-            <p class="pad sp">cost: <%= val.cost%> $</p>
-            <form action="/delete/<%= val.id%>?_method=delete" method="post">
-            <button type="submit">delete</button>
-            </form>
-        </div>
-        <%});%>
+    <%- include('../layout/header_abdallah.ejs') %> 
+    <main class="container">
+        <section class="card"   data-aos="fade-left">
+            <% data.forEach (val  =>{ %>
+            <div class="form">
+                <h3 class="h3"> <%= val.name %></h3>
+                 <img class="img1" src="<%= val.image %>" alt="rocket">
+                     <div class="allp">
+                         <p > <%= val.net %></p>
+                         <p class="agencies"> <%= val.agencies%> </p>
+                         <p class="ds"> <%=val.description %> </p>
+                         <p class="cash">cost: <%= val.cost%> <span>$</span> </p>
+                    </div>
+                    <form class="btn" action="/delete/<%= val.id%>?_method=delete" method="post">
+                        <button  class="booking" type="submit">
+                            <span></span>
+                            <span></span>
+                            delete</button>
+                        </form>
+            </div>
+
+
+            <%});%>
+        </section>
 
 
 
     </main>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          offset:700,
+          duration:900
+      });
+    </script>
 </body>
 
 </html>
+   

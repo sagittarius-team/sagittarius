@@ -224,7 +224,7 @@ function fulureMission(req, res) {
             }
             else {
                 console.log('API Future');
-                let url = `https://launchlibrary.net/1.3/launch/next/10`;
+                let url = `https://launchlibrary.net/1.3/launch/next/9`;
                 superagent.get(url)
                     .then(data => {
                         data.body.launches.forEach(val => {
