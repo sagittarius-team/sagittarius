@@ -19,6 +19,7 @@
 body{
         background-color: #010615;
 
+
 }
 .box-min{
 
@@ -43,6 +44,7 @@ body{
     transition: 0.5s;
     background: #060c21;
 
+
 }
 .about-box:hover{
     height: 400px;
@@ -51,6 +53,7 @@ body{
 
 .about-box .abou-image{
     position: absolute;
+
     top: 8;
     left: 11px;
     width: 94%;
@@ -156,7 +159,9 @@ body{
     font-weight: 200;
     letter-spacing: 2px;
     
+
 }
+/* end of flipping */
 
 
 
