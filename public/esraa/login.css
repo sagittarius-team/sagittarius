@@ -25,8 +25,10 @@
     background: linear-gradient(rgb(243, 226, 242),#6d00a9,#190027);
     border-radius: 14px;
     width: 27%;
-    height: 68%;
-    position: relative;
+    top: 10%;
+    height: 61%;
+    left: 34%;
+    position: absolute;
     display: flex;
     flex-direction: column;
     /* line-height: 3px; */
@@ -269,4 +271,126 @@
         transform: translate(-20%,-20%);
     }
 
+}
+
+
+
+
+/* ///////////////////////////////
+////////////////////////////
+
+//////////////////////////////
+////////////////////////////// */
+.align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background: palevioletred;
+}
+.contain33{
+    position: relative;
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     display: none;
+
+  }
+
+  .contain33 .face33{
+    background: url(/images/Alien-Design-Setedit-removebg-preview\ \(2\).png);
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    transform: rotate(-27deg);
+    left: 24%;
+    top: 14px;
+    animation: signUp 0.2s linear 1;
+
+
+  }
+
+  .contain33 .face33:hover{
+      background-color: none;
+  }
+  
+   .contain33 .face33:before{
+     content: "";
+     position: absolute;
+     top: 106px;
+     width: 21px;
+     left: 41%;
+     height: 11px;
+     border-bottom-left-radius: 70px;
+     border-bottom-right-radius: 70px;
+     background-color: #c7bcbe;
+     transition: .5s;
+ 
+   }
+   .contain33 .face33:hover:before{
+
+     top:109px;
+     width: 15px;
+     height: 6px;
+     left: 42%;
+     border-bottom-left-radius: 3px;
+     border-bottom-right-radius:3px;
+     background: #c7bcbe;
+
+ 
+ }
+
+
+   .contain33 .face33 .eyes{
+     position: relative;
+     top: -117px;
+     left: -6%;
+     display: flex;
+     flex-wrap: wrap;
+   }
+
+   .contain33 .face33 .eyes .eye1{
+     position: relative;
+     position: relative;
+     width: 10px;
+     height: 9px;
+     /* color: white; */
+     border-radius: 92%;
+     display: block;
+     margin: 0 15px;
+     background-color: #cbcbcb;
+   
+   }
+
+   .contain33 .face33 .eyes .eye1:before{
+
+     content: "";
+     position: absolute;
+     top: 62%;
+     left: 40%;
+     transform: translate(-50%,-50%);
+     width: 5px;
+     height: 8px;
+     background: #222181;
+     border-radius: 50%;
+   }
+
+.myInput{
+
+   font-size: 18px;
+    width: 276px;
+    height: 48px;
+    border: 3px solid gray;
+    opacity: .9;
+    box-sizing: border-box;
+    color: black;
+    padding: 14px;
+    border-radius: 10px;
+    word-spacing: 4px;
+    font-family: auto;
 }
