@@ -34,3 +34,7 @@ inputs.forEach((input) => {
     });
     
 });
+
+$('.close2').onClick(() =>{
+    $('#popup2').hide();
+})

@@ -8,14 +8,14 @@ body{
 
 
   /* height: 10000px; */
-  /* position: relative; */
+  position: relative;
     /* line-height: 40px; */
   /* overflow:scroll; */
 
 
 }
 .myheader1{
-  /* position: absolute; */
+  position: absolute;
   width: 100%;
   height: 73px;
   background: black;
@@ -88,6 +88,8 @@ align-items: center;
     left: 0;
     width: 100%;
     height: 100%;
+    /* background:url("/images/photo-of-tent-during-evening-3694362.jpg"); */
+    z-index: -9;
     background: url('./images/1876.jpg');
     background-size: 100% 100%;
     background-position: center center;
