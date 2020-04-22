@@ -1,110 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="shortcut icon" href="./image/tab-01.png" />
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Roboto+Slab:wght@100&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./esraa/profile.css">
 
 </head>
-
 <body>
 
+
     <div class="all-pro">
-        <div class="bg">
+
+       
 
 
+        <div class="opcity-pro"> <!--for opectiy-->
+            <div class="first-nav">
 
-
-            <div class="opcity-pro">
-                <!--for opectiy-->
-                <div class="first-nav">
-
-                    <div class="extra">
-                        <ul class="extra22">
-                            <li><a href="#"><i class="fa fa-globe" aria-hidden="true"></i>
-                                </a></li>
-                            <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
-                                </a></li>
-                            <li><a href="#"><i class="fa fa-rocket" aria-hidden="true"></i>
-                                </a></li>
-                            <li><a href="#"><i class="fa fa-grav" aria-hidden="true"></i></a></i>
-                            </li>
-                            <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i>
-                                    </i>
-                                </a></li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="astronaut">
-                    <img src="/images/man-01.png">
-                    <div class="btn">
-                        <button class="msg1"> Book Now</button>
-
-                    </div>
-                    <div class="row-hr">
-                        <p>profile</p>
-                        <hr>
-                    </div>
-                    <!-- ///////////////////// -->
-                    <ul class="all-nav">
-                        <li class="nav-prof"><img src="/images/userE-01.png">
-                            <p>My Profile</p>
-                        </li>
-                        <li class="nav-prof"><img src="/images/home-run-01.png">
-                            <p>Home</p>
-                        </li>
-                        
+                <div class="extra">
+                    <ul class="extra22">
+                    <li><a href="#"><i class="fa fa-globe" aria-hidden="true"></i>
+                    </a></li>
+                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                    </a></li>
+                    <li><a href="#"><i class="fa fa-rocket" aria-hidden="true"></i>
+                    </a></li>
+                    <li><a href="#"><i class="fa fa-grav" aria-hidden="true"></i></a></i>
+                    </li>
+                    <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i>
+                    </i>
+                    </a></li>
                     </ul>
-                    <div class="row-hr">
-                        <p>special</p>
-                        <hr>
                     </div>
-                </div>
-
+    
             </div>
-            <div class="profiles">
-
-                <h2>My Profile</h2>
-                <p>This information will be displayed publicly on <a href="#">Your profile</a></p>
-
-                <label for="">
-                    Username</label>
-                <input type="text" class="input-pro" name="username" placeholder="Username:"
-                    value=" <%= taskResult.username%>">
-                <label for="">Email</label>
-                <input type="text" class="input-pro" name="email" placeholder="User Email:"
-                    value="<%= taskResult.email%>">
-                <label for="">Gender</label>
-                <input type="text" class="input-pro" name="gender" placeholder="User gender:"
-                    value=" <%= taskResult.gender%>">
-                <label for="">Birth Day:</label>
-                <div class="my-Birth">
-                    <input type="text" class="input-Birth" name="day" placeholder="Day:" value=" <%= taskResult.day%>">/
-                    <input type="text" class="input-Birth" name="month" placeholder="Month:"
-                        value=" <%= taskResult.month%>">/
-                    <input type="text" class="input-Birth" name="year" placeholder="Year:"
-                        value=" <%= taskResult.year%>">
-                </div>
-
-                <button> <a href="/">Save</a></button>
-            </div>
+    
 
 
-        </div>
-    </div>
 
+<div class="astronaut">
+    <img src="/images/user-01.png">
+    <div class="btn">
+    <button class="msg1"> Book Now</button>
+   
+</div>
+<div class="row-hr">
+    <p>profile</p>
+    <hr></div>
+    <!-- ///////////////////// -->
+    <ul class="all-nav">
+<li class="nav-prof"><img src="/images/userE-01.png"> <p>My Profile</p></li>
+<li class="nav-prof"><img src="/images/home-run-01.png"> <p>Home</p></li>
+<li class="nav-prof">hi</li>
+    </ul>
+    <div class="row-hr">
+        <p>special</p>
+        <hr></div>
+</div>
+
+</div>
+    <div class="profiles">
+
+<h2>My Profile</h2>
+<p>This information will be displayed publicly on <a href="#">Your profile</a></p>
+
+    <label for="" > 
+        Username</label>
+    <input  type="text" class="input-pro"  name="username" placeholder="Username:" value=" <%= taskResult.username%>">
+    <label for="" >Email</label>
+        <input  type="text" class="input-pro" name="email" placeholder="User Email:" value="<%= taskResult.email%>">
+<label for="" >Gender</label>
+<input  type="text" class="input-pro" name="gender" placeholder="User gender:" value=" <%= taskResult.gender%>">
+<label for="" >Birth Day:</label> 
+<div class="my-Birth">
+<input  type="text" class="input-Birth" name="day" placeholder="Day:" value=" <%= taskResult.day%>">/
+<input  type="text" class="input-Birth" name="month" placeholder="Month:" value=" <%= taskResult.month%>">/
+<input  type="text" class="input-Birth" name="year" placeholder="Year:" value=" <%= taskResult.year%>">
+</div>
+
+  <button> <a href="/">save profile Details</a></button>
+</div>
+
+
+</div>
 
 </body>
-
 </html>
