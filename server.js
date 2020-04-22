@@ -273,8 +273,8 @@ function booking(req, res) {
                 });
         }
         else {
-            renderBookDataBase(req,res);
-            res.render('./layout/login');
+            let vaildData = {text:'You Need To Sign In' }
+                res.render('valid',{data: vaildData.text});
         }
     })
   
