@@ -8,16 +8,16 @@
     right: 0;
     background: rgba(0, 0, 0, 0.7);
     transition: opacity 500ms; 
-    visibility: hidden; 
-    opacity: 0;
+     visibility: hidden;  
+     opacity: 0; 
     z-index: 111;
   }
 
-  .overlay2:target {
+  .overlay2:target { 
     visibility: visible;
     opacity: 1;
     z-index: 999999;
-  }
+  } 
  
   .popup3 {
     margin: 100px auto;
@@ -235,7 +235,7 @@
     /* flex-grow: 1; */
     margin-bottom: -17px;
     margin-top: -5px;
-    font-size: 12px;
+    font-size: 11px;
 
     
 }   

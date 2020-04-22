@@ -5,27 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="shortcut icon" href="./image/tab-01.png" />
     <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./esraa/login.css">
     <link rel="stylesheet" href="./esraa/sign.css">
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <link rel="stylesheet" href="/header_abdallah.css">
-
+    <link rel="stylesheet" href="./index.css">
 
 </head>
 
 <body>
-
     <%- include('./layout/header_abdallah.ejs') %>
+
     <%- include('./layout/signup.ejs')%>
     <%- include('./layout/login.ejs')%>
-
-
-
 
     <main class="pic-head">
         <div class="landing">
@@ -40,10 +35,6 @@
         </div>
 
     </main>
-
-
-
-
     <div id="body" class="home">
         <div class="header">
             <div>
@@ -62,23 +53,15 @@
             </div>
         </div>
 
-
-
-
-
-
-
-
-
         <div class="down">
             <div class="between">
                 <h2>This photo was taken by NASA on: <%= data.date %></h2>
+                <h2><%= data.title %></h2>
             </div>
             <div>
-                <img class="todayI" src="<%= data.image%>" alt="today image">
                 <div class="desc">
-                    <h2><%= data.title %></h2>
-                    <p><%= data.description %></p>
+                    <img data-aos="zoom-in-up" class="todayI" src="<%= data.image%>" alt="today image">
+                    <p data-aos="zoom-in-up"><%= data.description %></p>
 
                 </div>
 
@@ -86,43 +69,17 @@
         </div>
 
     </div>
+    <footer>
+        <%- include('./layout/footer.ejs') %>
+    </footer>
+
 
     <script>
-        AOS.init();
+        AOS.init({
+            offset: 100,
+            duration: 400
+        });
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script src="/js/ind.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-body {
+#go {
     background-color: rgb(55, 1, 83);
     display: flex;
     font-family: 'Roboto', sans-serif;

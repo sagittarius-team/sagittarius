@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-img {
-    width: 250px;
-}
-body{
-    background-color: #6D00A9;
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
-    margin: auto;
+/* img {
+    width: 60%;
 
+} */
+body , html{
+    width: auto;
+    background-color: black;
+    background-image: url('../images/cluster-of-stars-1341279.jpg');
+    background-size: cover;
+    box-sizing: border-box;
+    
 }
-main {
+/* main {
 width: 100%;
 display: flex;
 justify-content: center;
@@ -21,17 +23,36 @@ flex-wrap: wrap;
 div {
     width: 30%;
     display: flex;
-    color: white;
-    background-color: rgb(0, 0, 0);
+    color: black;
+    height: 300px;
+    flex-grow: 1f;
+    background-color: #6D00A9;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: gray;
     text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px grey;
 }
 button {
-    padding: 7% 16%;
+    padding: 9% 20%;
     border-radius: 7px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
 }
+button:hover {
+    background-color: rgb(80, 2, 122);
+    color: white;
+    border: 1px rgb(202, 126, 243);
+
+}
+.pad {
+    padding: 1%;
+    margin: 2%;
+}
+.sp {
+    margin-right: 2%;
+    margin-left: 2%;
+} */
