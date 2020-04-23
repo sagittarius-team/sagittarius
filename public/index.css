@@ -192,7 +192,7 @@ a:hover{
   }
 .between h2:nth-child(2) {
     font-size: 7em;
-    -webkit-background-clip: text;
+  
     -webkit-text-fill-color: transparent;
     background-image: url('./image/jeremy-thomas-4dpAqfTbvKA-unsplash.jpg');
     background-attachment: fixed;
@@ -227,6 +227,7 @@ a:hover{
     opacity: .8;
   
   }
+
 
 /* 
 .sat{
@@ -458,4 +459,4 @@ height:100%;
   }
 
 
-/* footer css */
+

@@ -369,15 +369,17 @@
 
    .contain33 .face33 .eyes .eye1:before{
 
-     content: "";
-     position: absolute;
-     top: 62%;
-     left: 40%;
-     transform: translate(-50%,-50%);
-     width: 5px;
-     height: 8px;
-     background: #222181;
-     border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: 33%;
+    left: 47%;
+    transform: translate(-50%,-50%);
+    width: 7px;
+    height: 6px;
+    background: #246c5b;
+    border-radius: 50%;
+}
+
    }
 
 .myInput{

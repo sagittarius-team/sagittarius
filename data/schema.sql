@@ -12,7 +12,7 @@ CREATE TABLE mission (
     description TEXT,
     name VARCHAR(255),
     vidurl VARCHAR(255),
-    img VARCHAR(255) DEFAULT 'https://media.wired.com/photos/5bdb590f9767b57847fe4222/master/pass/soyuz.jpg'
+    img VARCHAR(255) 
 );
 
 -- Esraa
